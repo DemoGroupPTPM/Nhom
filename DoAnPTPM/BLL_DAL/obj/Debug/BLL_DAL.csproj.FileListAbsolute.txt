@@ -1,0 +1,7 @@
+D:\DoAnMonHocPTPM\Nhom\DoAnPTPM\BLL_DAL\bin\Debug\BLL_DAL.dll.config
+D:\DoAnMonHocPTPM\Nhom\DoAnPTPM\BLL_DAL\bin\Debug\BLL_DAL.dll
+D:\DoAnMonHocPTPM\Nhom\DoAnPTPM\BLL_DAL\bin\Debug\BLL_DAL.pdb
+D:\DoAnMonHocPTPM\Nhom\DoAnPTPM\BLL_DAL\obj\Debug\BLL_DAL.csproj.CoreCompileInputs.cache
+D:\DoAnMonHocPTPM\Nhom\DoAnPTPM\BLL_DAL\obj\Debug\BLL_DAL.dll
+D:\DoAnMonHocPTPM\Nhom\DoAnPTPM\BLL_DAL\obj\Debug\BLL_DAL.pdb
+D:\DoAnMonHocPTPM\Nhom\DoAnPTPM\BLL_DAL\obj\Debug\BLL_DAL.csprojAssemblyReference.cache

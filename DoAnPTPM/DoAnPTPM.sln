@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoAnPTPM_GUI", "DoAnPTPM\DoAnPTPM_GUI.csproj", "{DB42BAAB-621F-4B78-8F8A-A0EFBD4DF6AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL_DAL", "BLL_DAL\BLL_DAL.csproj", "{17FBF6B1-455E-4566-B3E7-3F838C0B7CD6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB42BAAB-621F-4B78-8F8A-A0EFBD4DF6AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB42BAAB-621F-4B78-8F8A-A0EFBD4DF6AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB42BAAB-621F-4B78-8F8A-A0EFBD4DF6AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB42BAAB-621F-4B78-8F8A-A0EFBD4DF6AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17FBF6B1-455E-4566-B3E7-3F838C0B7CD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17FBF6B1-455E-4566-B3E7-3F838C0B7CD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17FBF6B1-455E-4566-B3E7-3F838C0B7CD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17FBF6B1-455E-4566-B3E7-3F838C0B7CD6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {849FB970-8EBB-427F-83BC-467669E2D41E}
+	EndGlobalSection
+EndGlobal

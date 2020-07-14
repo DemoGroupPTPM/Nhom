@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_CUAHANGDT" Class="QLCHDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=KIMHUNG\SQLEXPRESS;Initial Catalog=QL_CUAHANGDT;User ID=sa" SettingsObjectName="BLL_DAL.Properties.Settings" SettingsPropertyName="QL_CUAHANGDTConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CHUCNANG" Member="CHUCNANGs">
+    <Type Name="CHUCNANG">
+      <Column Name="MACHUCNANG" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENCHUCNANG" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="CHUCNANG_CTPHANQUYEN" Member="CTPHANQUYENs" ThisKey="MACHUCNANG" OtherKey="MACHUCNANG" Type="CTPHANQUYEN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NHANVIEN" Member="NHANVIENs">
+    <Type Name="NHANVIEN">
+      <Column Name="MANV" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENDN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MATKHAU" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TENNV" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DIACHI" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DIENTHOAI" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="MAPHANQUYEN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CHUTHICH" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="PHANQUYEN_NHANVIEN" Member="PHANQUYEN" ThisKey="MAPHANQUYEN" OtherKey="MAPHANQUYEN" Type="PHANQUYEN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CTPHANQUYEN" Member="CTPHANQUYENs">
+    <Type Name="CTPHANQUYEN">
+      <Column Name="MAPHANQUYEN" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MACHUCNANG" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="CHUCNANG_CTPHANQUYEN" Member="CHUCNANG" ThisKey="MACHUCNANG" OtherKey="MACHUCNANG" Type="CHUCNANG" IsForeignKey="true" />
+      <Association Name="PHANQUYEN_CTPHANQUYEN" Member="PHANQUYEN" ThisKey="MAPHANQUYEN" OtherKey="MAPHANQUYEN" Type="PHANQUYEN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PHANQUYEN" Member="PHANQUYENs">
+    <Type Name="PHANQUYEN">
+      <Column Name="MAPHANQUYEN" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MANHINH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CHUTHICH" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="PHANQUYEN_NHANVIEN" Member="NHANVIENs" ThisKey="MAPHANQUYEN" OtherKey="MAPHANQUYEN" Type="NHANVIEN" />
+      <Association Name="PHANQUYEN_CTPHANQUYEN" Member="CTPHANQUYENs" ThisKey="MAPHANQUYEN" OtherKey="MAPHANQUYEN" Type="CTPHANQUYEN" />
+    </Type>
+  </Table>
+</Database>

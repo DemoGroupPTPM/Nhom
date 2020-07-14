@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QLCH">
+  <DataContextMoniker Name="/QLCHDataContext" />
+  <nestedChildShapes>
+    <classShape Id="4e1bce8a-dbef-4893-8a72-0cab2ee810e9" absoluteBounds="0.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/QLCHDataContext/CHUCNANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fb80fa23-4752-4551-81f5-5bd505e9d52a" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0d67683b-d861-49eb-81af-ca0b38194b9c" absoluteBounds="3.5, 5.125, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/QLCHDataContext/NHANVIEN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="75f8b39c-dbbb-43c8-9a15-5dad65ac90ce" absoluteBounds="3.515, 5.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8a8a0c98-7c6a-4508-952e-dec666175e6e" absoluteBounds="3.5, 2.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/QLCHDataContext/CTPHANQUYEN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8d7e60b3-b599-4ec7-817b-3cb51b919172" absoluteBounds="3.515, 3.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="02f012d4-b1a0-4251-aff7-93f22ab761f5" absoluteBounds="0.75, 3.625, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/QLCHDataContext/PHANQUYEN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3644f711-9c28-4beb-8e86-a04b812fe7a1" absoluteBounds="0.765, 4.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.34699625651042); (4.5 : 1.34699625651042); (4.5 : 2.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QLCHDataContext/CHUCNANG/CHUCNANG_CTPHANQUYEN" />
+      <nodes>
+        <classShapeMoniker Id="4e1bce8a-dbef-4893-8a72-0cab2ee810e9" />
+        <classShapeMoniker Id="8a8a0c98-7c6a-4508-952e-dec666175e6e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 5.0112939453125); (1.75 : 6.29890055338542); (3.5 : 6.29890055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QLCHDataContext/PHANQUYEN/PHANQUYEN_NHANVIEN" />
+      <nodes>
+        <classShapeMoniker Id="02f012d4-b1a0-4251-aff7-93f22ab761f5" />
+        <classShapeMoniker Id="0d67683b-d861-49eb-81af-ca0b38194b9c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.78449625651042); (3.5 : 3.78449625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QLCHDataContext/PHANQUYEN/PHANQUYEN_CTPHANQUYEN" />
+      <nodes>
+        <classShapeMoniker Id="02f012d4-b1a0-4251-aff7-93f22ab761f5" />
+        <classShapeMoniker Id="8a8a0c98-7c6a-4508-952e-dec666175e6e" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

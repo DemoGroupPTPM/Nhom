@@ -1,0 +1,16 @@
+D:\DoAnMonHocPTPM\Nhom\DoAnPTPM\DoAnPTPM\obj\Debug\DoAnPTPM_GUI.csprojAssemblyReference.cache
+D:\DoAnMonHocPTPM\Nhom\DoAnPTPM\DoAnPTPM\obj\Debug\DoAnPTPM.frmDangNhap.resources
+D:\DoAnMonHocPTPM\Nhom\DoAnPTPM\DoAnPTPM\obj\Debug\DoAnPTPM.Properties.Resources.resources
+D:\DoAnMonHocPTPM\Nhom\DoAnPTPM\DoAnPTPM\obj\Debug\DoAnPTPM_GUI.csproj.GenerateResource.cache
+D:\DoAnMonHocPTPM\Nhom\DoAnPTPM\DoAnPTPM\obj\Debug\DoAnPTPM_GUI.csproj.CoreCompileInputs.cache
+D:\DoAnMonHocPTPM\Nhom\DoAnPTPM\DoAnPTPM\bin\Debug\DoAnPTPM.exe.config
+D:\DoAnMonHocPTPM\Nhom\DoAnPTPM\DoAnPTPM\bin\Debug\DoAnPTPM.exe
+D:\DoAnMonHocPTPM\Nhom\DoAnPTPM\DoAnPTPM\bin\Debug\DoAnPTPM.pdb
+D:\DoAnMonHocPTPM\Nhom\DoAnPTPM\DoAnPTPM\bin\Debug\BLL_DAL.dll
+D:\DoAnMonHocPTPM\Nhom\DoAnPTPM\DoAnPTPM\bin\Debug\BLL_DAL.pdb
+D:\DoAnMonHocPTPM\Nhom\DoAnPTPM\DoAnPTPM\bin\Debug\BLL_DAL.dll.config
+D:\DoAnMonHocPTPM\Nhom\DoAnPTPM\DoAnPTPM\obj\Debug\DoAnPTPM.frm_Main.resources
+D:\DoAnMonHocPTPM\Nhom\DoAnPTPM\DoAnPTPM\obj\Debug\DoAnPTPM_GUI.csproj.CopyComplete
+D:\DoAnMonHocPTPM\Nhom\DoAnPTPM\DoAnPTPM\obj\Debug\DoAnPTPM.exe
+D:\DoAnMonHocPTPM\Nhom\DoAnPTPM\DoAnPTPM\obj\Debug\DoAnPTPM.pdb
+D:\DoAnMonHocPTPM\Nhom\DoAnPTPM\DoAnPTPM\obj\Debug\DoAnPTPM.frm_QuanLyNV.resources

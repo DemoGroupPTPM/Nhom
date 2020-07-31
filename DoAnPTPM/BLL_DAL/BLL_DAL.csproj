@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BLL_DAL</RootNamespace>
     <AssemblyName>BLL_DAL</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,11 +44,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChucNang_BLL.cs" />
-    <Compile Include="DataSet1.Designer.cs">
+    <Compile Include="DataSet1.cs">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="HoaDon_BLL.cs" />
+    <Compile Include="NhomHang_BLL.cs" />
+    <Compile Include="KhachHang_BLL.cs" />
+    <Compile Include="LoaiHang_BLL.cs" />
+    <Compile Include="NCC_BLL.cs" />
     <Compile Include="NhanVienBLL.cs" />
     <Compile Include="PhanQuyen_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -61,6 +70,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLCH.dbml</DependentUpon>
     </Compile>
+    <Compile Include="SanPham_BLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -68,9 +78,9 @@
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
     <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </None>
     <None Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>

@@ -62,10 +62,10 @@ CREATE TABLE NHANVIEN(
 	CHUTHICH NVARCHAR(100),
 	constraint FK_NV_QUYEN foreign key (MAPHANQUYEN) references PHANQUYEN(MAPHANQUYEN),
 )
-INSERT INTO NHANVIEN VALUES ('NV1',N'123',N'hùng',null,'0903655561','PQQuanLy',N'chủ cửa hàng')
-INSERT INTO NHANVIEN VALUES ('NV2',N'123',N'thanh',N'11/29 dương đức hiền','0961231024','PQBanHang',N'bán hàng')
+INSERT INTO NHANVIEN VALUES ('NV0001',N'123',N'hùng',null,'0903655561','PQQuanLy',N'chủ cửa hàng')
+--INSERT INTO NHANVIEN VALUES ('NV2',N'123',N'thanh',N'11/29 dương đức hiền','0961231024','PQBanHang',N'bán hàng')
 
---select * from NHANVIEN
+select * from NHANVIEN
 
 CREATE TABLE NHACUNGCAP(
 	MANCC nvarchar(50) PRIMARY KEY,
@@ -74,9 +74,9 @@ CREATE TABLE NHACUNGCAP(
 	DIENTHOAI char(10),
 	CHUTHICH NVARCHAR(100),
 )
-INSERT INTO NHACUNGCAP VALUES (N'NCC1',N'Công Ty TNHH Thế Giới Di Động',N'364 Cộng Hòa ,P. 13 ,Q. Tân Bình','0932115177',null)
-INSERT INTO NHACUNGCAP VALUES (N'NCC2',N'Viettel TPHCM',N'285 Cách Mạng Tháng Tám, P. 12, Q. 10,','0942981657',null)
-INSERT INTO NHACUNGCAP VALUES (N'NCC3',N'Phụ Kiện Buôn Bán',N'Số 117-119, Lý Chính Thắng, P. 7, Q. 3','0942014717',null)
+INSERT INTO NHACUNGCAP VALUES (N'NCC0001',N'Công Ty TNHH Thế Giới Di Động',N'364 Cộng Hòa ,P. 13 ,Q. Tân Bình','0932115177',null)
+INSERT INTO NHACUNGCAP VALUES (N'NCC0002',N'Viettel TPHCM',N'285 Cách Mạng Tháng Tám, P. 12, Q. 10,','0942981657',null)
+INSERT INTO NHACUNGCAP VALUES (N'NCC0003',N'Phụ Kiện Buôn Bán',N'Số 117-119, Lý Chính Thắng, P. 7, Q. 3','0942014717',null)
 
 
 CREATE TABLE KHACHHANG(
@@ -86,7 +86,8 @@ CREATE TABLE KHACHHANG(
 	DIENTHOAI NVARCHAR(10),
 	EMAIL NVARCHAR(50) NULL,
 )
-
+INSERT INTO KHACHHANG VALUES(N'KH0001',N'Thái Kim Hùng',N'364 Cộng Hòa ,P. 13 ,Q. Tân Bình','0932115177','hih@gmail.com' )
+--delete from KHACHHANG
 CREATE TABLE NHOMHANG(
 	MANHOMHANG NVARCHAR(50) PRIMARY KEY,
 	TENNHOMHANG NVARCHAR(100),
@@ -100,15 +101,15 @@ CREATE TABLE LOAIHANG(
 	TENLOAI NVARCHAR(100),
 	constraint FK_LOAIHANG_NHOMHANG  foreign key (MANHOMHANG) references NHOMHANG(MANHOMHANG),
 )
-INSERT INTO LOAIHANG VALUES(N'Loai1',N'NhomPHUKIEN',N'Sạc, cáp')
-INSERT INTO LOAIHANG VALUES(N'Loai2',N'NhomPHUKIEN',N'Ốp lưng điện thoại')
-INSERT INTO LOAIHANG VALUES(N'Loai3',N'NhomPHUKIEN',N'Cường lực điện thoại')
-INSERT INTO LOAIHANG VALUES(N'Loai4',N'NhomDIENTHOAI',N'Điện thoại Iphone')
-INSERT INTO LOAIHANG VALUES(N'Loai5',N'NhomDIENTHOAI',N'Điện thoại Xiaomi')
-INSERT INTO LOAIHANG VALUES(N'Loai6',N'NhomDIENTHOAI',N'Điện thoại SamSung')
+INSERT INTO LOAIHANG VALUES(N'Loai0001',N'NhomPHUKIEN',N'Sạc, cáp')
+INSERT INTO LOAIHANG VALUES(N'Loai0002',N'NhomPHUKIEN',N'Ốp lưng điện thoại')
+INSERT INTO LOAIHANG VALUES(N'Loai0003',N'NhomPHUKIEN',N'Cường lực điện thoại')
+INSERT INTO LOAIHANG VALUES(N'Loai0004',N'NhomDIENTHOAI',N'Điện thoại Iphone')
+INSERT INTO LOAIHANG VALUES(N'Loai0005',N'NhomDIENTHOAI',N'Điện thoại Xiaomi')
+INSERT INTO LOAIHANG VALUES(N'Loai0006',N'NhomDIENTHOAI',N'Điện thoại SamSung')
 
-
-
+select * from LOAIHANG order by MALOAI ASC
+select * from NHACUNGCAP
 CREATE TABLE SANPHAM(
 	MASP NVARCHAR(50) PRIMARY KEY,
 	MALOAI NVARCHAR(50),
@@ -122,41 +123,41 @@ CREATE TABLE SANPHAM(
 	constraint FK_SANPHAM_NHACUNGCAP  foreign key (MANCC) references NHACUNGCAP(MANCC),
 )
 --LOẠI 1 : SẠC, CÁP
-INSERT INTO SANPHAM VALUES('SP1',N'Loai1',N'Sạc Nhanh LV0001', N'sacnhanh01.JPG',200000,'50',N'12 tháng',N'NCC1');
-INSERT INTO SANPHAM VALUES('SP2',N'Loai1',N'Sạc Nhanh LV0006', N'sacnhanh06.JPG',300000,'50',N'12 tháng',N'NCC1');
-INSERT INTO SANPHAM VALUES('SP3',N'Loai1',N'Cáp sạc LV0001', N'capsac01.JPG',150000,'50',N'12 tháng',N'NCC1');
-INSERT INTO SANPHAM VALUES('SP4',N'Loai1',N'Cáp sạc LV0006', N'capsac06.JPG',200000,'50',N'12 tháng',N'NCC1');
+INSERT INTO SANPHAM VALUES('SP0001',N'Loai0001',N'Sạc Nhanh LV0001', N'sacnhanh01.JPG',200000,'50',N'12 tháng',N'NCC0001');
+INSERT INTO SANPHAM VALUES('SP0002',N'Loai0001',N'Sạc Nhanh LV0006', N'sacnhanh06.JPG',300000,'50',N'12 tháng',N'NCC0001');
+INSERT INTO SANPHAM VALUES('SP0003',N'Loai0001',N'Cáp sạc LV0001', N'capsac01.JPG',150000,'50',N'12 tháng',N'NCC0001');
+INSERT INTO SANPHAM VALUES('SP0004',N'Loai0001',N'Cáp sạc LV0006', N'capsac06.JPG',200000,'50',N'12 tháng',N'NCC0001');
 ---loại 2 :ốp lưng điện thoại
-INSERT INTO SANPHAM VALUES('SP5',N'Loai2',N'Ốp lưng Iphone 6/6s ', N'olip6.JPG',50000,'50',N'không bảo hành ',N'NCC2');
-INSERT INTO SANPHAM VALUES('SP6',N'Loai2',N'Ốp lưng iphone 7/8 ', N'olip7.JPG',50000,'50',N'không bảo hành',N'NCC2');
-INSERT INTO SANPHAM VALUES('SP7',N'Loai2',N'Ốp lưng iphone 6plus/6splus ', N'olip6pl.JPG',50000,'50',N'không bảo hành',N'NCC2');
-INSERT INTO SANPHAM VALUES('SP8',N'Loai2',N'Ốp lưng iphone 7plus/8plus ', N'olip8pl.JPG',50000,'50',N'không bảo hành',N'NCC2');
+INSERT INTO SANPHAM VALUES('SP0005',N'Loai0002',N'Ốp lưng Iphone 6/6s ', N'olip6.JPG',50000,'50',N'không bảo hành ',N'NCC0002');
+INSERT INTO SANPHAM VALUES('SP0006',N'Loai0002',N'Ốp lưng iphone 7/8 ', N'olip7.JPG',50000,'50',N'không bảo hành',N'NCC0002');
+INSERT INTO SANPHAM VALUES('SP0007',N'Loai0002',N'Ốp lưng iphone 6plus/6splus ', N'olip6pl.JPG',50000,'50',N'không bảo hành',N'NCC0002');
+INSERT INTO SANPHAM VALUES('SP0008',N'Loai0002',N'Ốp lưng iphone 7plus/8plus ', N'olip8pl.JPG',50000,'50',N'không bảo hành',N'NCC0002');
 
 
-INSERT INTO SANPHAM VALUES('SP9',N'Loai2',N'Ốp lưng xiaomi note', N'olxiaomi.JPG',50000,'50',N'không bảo hành',N'NCC3');
-INSERT INTO SANPHAM VALUES('SP10',N'Loai2',N'Ốp lưng Samsung A ', N'olssA.JPG',50000,'50',N'không bảo hành',N'NCC3');
-INSERT INTO SANPHAM VALUES('SP11',N'Loai2',N'Ốp lưng Samsung note ', N'olssN.JPG',50000,'50',N'không bảo hành',N'NCC3');
-INSERT INTO SANPHAM VALUES('SP12',N'Loai2',N'Ốp lưng Samsung J ', N'olssJ.JPG',50000,'50',N'không bảo hành',N'NCC3');
+INSERT INTO SANPHAM VALUES('SP0009',N'Loai0002',N'Ốp lưng xiaomi note', N'olxiaomi.JPG',50000,'50',N'không bảo hành',N'NCC0003');
+INSERT INTO SANPHAM VALUES('SP0010',N'Loai0002',N'Ốp lưng Samsung A ', N'olssA.JPG',50000,'50',N'không bảo hành',N'NCC0003');
+INSERT INTO SANPHAM VALUES('SP0011',N'Loai0002',N'Ốp lưng Samsung note ', N'olssN.JPG',50000,'50',N'không bảo hành',N'NCC0003');
+INSERT INTO SANPHAM VALUES('SP0012',N'Loai0002',N'Ốp lưng Samsung J ', N'olssJ.JPG',50000,'50',N'không bảo hành',N'NCC0003');
 
 
 ---loại 3 cường lực điện thoại
 
-INSERT INTO SANPHAM VALUES('SP24',N'Loai3',N'Cường lực iphone 6plus/7plus/8plus ', N'CL6P.JPG',50000,'50',N'không bảo hành',N'NCC3');
-INSERT INTO SANPHAM VALUES('SP13',N'Loai3',N'Ốp lưng iphone X/XS ', N'CLipX.JPG',50000,'50',N'không bảo hành',N'NCC3');
-INSERT INTO SANPHAM VALUES('SP14',N'Loai3',N'Ốp lưng iphone XR/11 ', N'CLipXR.JPG',50000,'50',N'không bảo hành',N'NCC3');
+INSERT INTO SANPHAM VALUES('SP0024',N'Loai0003',N'Cường lực iphone 6plus/7plus/8plus ', N'CL6P.JPG',50000,'50',N'không bảo hành',N'NCC0003');
+INSERT INTO SANPHAM VALUES('SP0013',N'Loai0003',N'Ốp lưng iphone X/XS ', N'CLipX.JPG',50000,'50',N'không bảo hành',N'NCC0003');
+INSERT INTO SANPHAM VALUES('SP0014',N'Loai0003',N'Ốp lưng iphone XR/11 ', N'CLipXR.JPG',50000,'50',N'không bảo hành',N'NCC0003');
 
 ---LOẠI 4 ĐIỆN THOẠI IPHONE
-INSERT INTO SANPHAM VALUES('SP15',N'Loai4',N' iphone 7plus/8plus ', N'ip8pl.JPG',10000000,'50',N'12 Tháng',N'NCC2');
-INSERT INTO SANPHAM VALUES('SP16',N'Loai4',N' iphone X/XS ', N'ipX.JPG',15000000,'50',N'12 Tháng',N'NCC2');
-INSERT INTO SANPHAM VALUES('SP17',N'Loai4',N' iphone XR ', N'ipXR.JPG',15000000,'50',N'k12 Tháng',N'NCC2');
+INSERT INTO SANPHAM VALUES('SP0015',N'Loai0004',N' iphone 7plus/8plus ', N'ip8pl.JPG',10000000,'50',N'12 Tháng',N'NCC0002');
+INSERT INTO SANPHAM VALUES('SP0016',N'Loai0004',N' iphone X/XS ', N'ipX.JPG',15000000,'50',N'12 Tháng',N'NCC0002');
+INSERT INTO SANPHAM VALUES('SP0017',N'Loai0004',N' iphone XR ', N'ipXR.JPG',15000000,'50',N'k12 Tháng',N'NCC0002');
 --LOẠI 5 ĐIỆN THOẠI xiaomi
-INSERT INTO SANPHAM VALUES('SP18',N'Loai5',N' xiaomi note ', N'xiaominote.JPG',10000000,'50',N'12 Tháng',N'NCC1');
-INSERT INTO SANPHAM VALUES('SP19',N'Loai5',N' xiaomi redmi ', N'xiaomiRedmi.JPG',8000000,'50',N'12 Tháng',N'NCC1');
-INSERT INTO SANPHAM VALUES('SP20',N'Loai5',N' xiaomi note 10plus', N'xiaomi10.JPG',6000000,'50',N'k12 Tháng',N'NCC1');
+INSERT INTO SANPHAM VALUES('SP0018',N'Loai0005',N' xiaomi note ', N'xiaominote.JPG',10000000,'50',N'12 Tháng',N'NCC0001');
+INSERT INTO SANPHAM VALUES('SP0019',N'Loai0005',N' xiaomi redmi ', N'xiaomiRedmi.JPG',8000000,'50',N'12 Tháng',N'NCC0001');
+INSERT INTO SANPHAM VALUES('SP0020',N'Loai0005',N' xiaomi note 10plus', N'xiaomi10.JPG',6000000,'50',N'k12 Tháng',N'NCC0001');
 --LOẠI 6 ĐIỆN THOẠI ss
-INSERT INTO SANPHAM VALUES('SP21',N'Loai6',N' Samsung A ', N'ssA.JPG',3000000,'50',N'12 Tháng',N'NCC1');
-INSERT INTO SANPHAM VALUES('SP22',N'Loai6',N' Samsung note ', N'ssN.JPG',15000000,'50',N'12 Tháng',N'NCC1');
-INSERT INTO SANPHAM VALUES('SP23',N'Loai6',N' Samsung J ', N'ssJ.JPG',1500000,'50',N'k12 Tháng',N'NCC1')
+INSERT INTO SANPHAM VALUES('SP0021',N'Loai0006',N' Samsung A ', N'ssA.JPG',3000000,'50',N'12 Tháng',N'NCC0001');
+INSERT INTO SANPHAM VALUES('SP0022',N'Loai0006',N' Samsung note ', N'ssN.JPG',15000000,'50',N'12 Tháng',N'NCC0001');
+INSERT INTO SANPHAM VALUES('SP0023',N'Loai0006',N' Samsung J ', N'ssJ.JPG',1500000,'50',N'k12 Tháng',N'NCC0001')
 
 
 
@@ -181,6 +182,7 @@ CREATE TABLE PHIEUNHAP
 	MANV nvarchar(50),
 	MANCC nvarchar(50),
 	NGAYLAP DATE,
+	THANHTIEN MONEY,
 	constraint FK_PHIEUNHAP_NV foreign key (MANV) references NHANVIEN(MANV),
 	constraint FK_PHIEUNHAP_NCC  foreign key (MANCC) references NHACUNGCAP(MANCC),
 )
@@ -211,9 +213,11 @@ CREATE TABLE HOADON(
 	MAKHACHHANG nvarchar(50),
 	MANV nvarchar(50) ,
 	NGAYLAPPHIEU DATE,
+	TONGTIEN MONEY,
 	constraint FK_HOADON_MAKHACHHANG foreign key (MAKHACHHANG) references KHACHHANG(MAKHACHHANG),
 	constraint FK_HOADON_NHANVIEN  foreign key (MANV) references NHANVIEN(MANV),
 )
+INSERT INTO HOADON VALUES(N'HD0001',N'KH0001',N'NV0001','2020/7/25',50000)
 CREATE TABLE CHITIETHOADON(
 	MAHD nvarchar(50), 
 	MASP NVARCHAR(50),
@@ -225,6 +229,8 @@ CREATE TABLE CHITIETHOADON(
 	constraint FK_CHITIETHOADON_HOADON foreign key (MAHD) references HOADON(MAHD),
 	constraint FK_CHITIETHOADON_SANPHAM  foreign key (MASP) references SANPHAM(MASP),
 )
+INSERT INTO CHITIETHOADON VALUES(N'HD0001',N'SP0024' ,50000, 1,N'Cái',50000)
+
 CREATE TABLE PHIEUTHU(
 	MAPHIEUTHU nvarchar(50) PRIMARY KEY,
 	MAHD nvarchar(50),

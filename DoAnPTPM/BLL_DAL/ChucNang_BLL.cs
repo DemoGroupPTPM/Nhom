@@ -11,10 +11,12 @@ namespace BLL_DAL
         QLCHDataContext qlch = new QLCHDataContext();
         public ChucNang_BLL() { }
 
-        //public IQueryable<CHUCNANG> LoadSV_BLL(string maphanquyen)
-        //{
-        //    return qlch.CHUCNANGs.Where(s => (s. == malop));
-        //}
+
+        // load tên chức năng bên trang quản lý nhân viên
+        public IQueryable<CHUCNANG> LoadTenChucNang_BLL(string maphanquyen)
+        {
+            return qlch.CHUCNANGs.Where(s => (s.MACHUCNANG == maphanquyen));
+        }
 
     }
 }

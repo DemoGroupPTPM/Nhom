@@ -19,14 +19,14 @@ namespace BLL_DAL
         public string GetTenDn_BLL(string manv)
         {
             nvadapter = new NHANVIENTableAdapter();
-            return nvadapter.LayTenDN_MANV(manv) + string.Empty;
+            return nvadapter.LayTenDnByMaNV(manv) + string.Empty;
         }
 
         //lấy mật khẩu
         public string GetMatKhau_BLL(string manv)
         {
             nvadapter = new NHANVIENTableAdapter();
-            return nvadapter.LayMatKhau_MaNV(manv) + string.Empty;
+            return nvadapter.LayMkByMaNV(manv) + string.Empty;
         }
         //lấy hết nv
         public DataTable GetCboMaNV_BLL()
@@ -35,6 +35,12 @@ namespace BLL_DAL
             return nvadapter.GetData();
         }
 
+        // kiểm tra nhân viên tồn tại
+        public string KiemTraMaNVTonTai(string manv)
+        {
+            nvadapter = new NHANVIENTableAdapter();
+            return nvadapter.KiemTraMaNVTonTai(manv);
+        }
 
         // load data grid view 
         public IQueryable<NHANVIEN> LoadNhanVien_BLL()
@@ -43,12 +49,11 @@ namespace BLL_DAL
         }
 
        // thêm nhân  viên
-        public void ThemNv(string manv, string tendn, string matkhau, string tennv,
+        public void ThemNv(string manv, string matkhau, string tennv,
             string diachi, string dienthoai,string maphanquyen, string chuthich)
         {
             NHANVIEN nv = new NHANVIEN();
             nv.MANV = manv;
-            nv.TENDN = tendn;
             nv.MATKHAU = matkhau;
             nv.TENNV = tennv;
             nv.DIACHI = diachi;
@@ -71,5 +76,52 @@ namespace BLL_DAL
             return true; // chưa tồn tại
         }
 
+        //  cập nhật lại mã nhân viên nếu cần thêm
+        public string SinhMaNV()
+        {
+            nvadapter = new NHANVIENTableAdapter();
+            string t;
+            if(nvadapter.GetSoMaNV().ToString() != "")
+            {
+                string somanv = "000" + nvadapter.GetSoMaNV().ToString();
+                somanv = somanv.Substring(somanv.Length - 4, 4);
+                t = "NV" + somanv;
+            }
+            else
+            {
+                t = "NV0001";
+            }
+            return t;
+        }
+
+        // sửa toàn bộ thông tin nhân viên , trừ mã nhân viên
+        public void suaNhanVien( string manv, string matkhau, string tennv,
+            string diachi, string dienthoai, string maphanquyen, string chuthich)
+        {
+            NHANVIEN nv = qlch.NHANVIENs.Where(d => d.MANV == manv).FirstOrDefault();
+            //diemsv.Diem1 = diem;
+            nv.MATKHAU = matkhau;
+            nv.TENNV = tennv;
+            nv.DIACHI = diachi;
+            nv.DIENTHOAI = dienthoai;
+            nv.MAPHANQUYEN = maphanquyen;
+            nv.CHUTHICH = chuthich;
+            qlch.SubmitChanges();
+        }
+
+        // xóa nhân viên
+        public void xoaNhanVien(string manv)
+        {
+            NHANVIEN nv = qlch.NHANVIENs.Where(d => d.MANV == manv).FirstOrDefault();
+            qlch.NHANVIENs.DeleteOnSubmit(nv);
+            qlch.SubmitChanges();
+        }
+
+        // lấy quyền của nhân viên dăng nhập
+        public string LayQuyenNhanVien(string manv)
+        {
+            nvadapter = new NHANVIENTableAdapter();
+            return nvadapter.LayPhanQuyenNV(manv);
+        }
     }
 }

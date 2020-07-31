@@ -12,6 +12,7 @@ namespace DoAnPTPM
 {
     public partial class frmDangNhap : Form
     {
+        public Boolean dn = true ;
         NhanVienBLL nvBLL = new NhanVienBLL();
         public frmDangNhap()
         {
@@ -20,88 +21,83 @@ namespace DoAnPTPM
 
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
-            LoadComBoBoxMaNV();
-            cboMaNV.Focus();
+            txtTaiKhoan.Focus();
         }
 
-        void LoadComBoBoxMaNV()
+        void ThucThi_DangNhap()
         {
-            cboMaNV.DataSource = nvBLL.GetCboMaNV_BLL();
-            cboMaNV.ValueMember = "MANV";
-            cboMaNV.DisplayMember = "MANV";
-            cboMaNV.SelectedIndex = -1;
-        }
+            try
+            {
 
-       
-        private void btnDangNhap_Click(object sender, EventArgs e)
-        {
-            if (cboMaNV.SelectedIndex != -1)
-            {
-                if (txtTaiKhoan.Text == String.Empty)
+                if (txtTaiKhoan.Text != string.Empty && txtMatKhau.Text != string.Empty)
                 {
-                    MessageBox.Show("Bạn còn bỏ trống tài khoản", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtTaiKhoan.Focus();
-                }
-                 else if (txtMatKhau.Text == String.Empty)
-                {
-                    MessageBox.Show("Bạn còn bỏ trống mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtMatKhau.Focus();
-                }
-                if (txtTaiKhoan.Text == String.Empty && txtMatKhau.Text == String.Empty)
-                {
-                    MessageBox.Show("Bạn còn bỏ trống tài khoản mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtTaiKhoan.Focus();
-                }
-            }
-            if ( txtTaiKhoan.Text != string.Empty && txtMatKhau.Text != string.Empty)
-            {
-                string tk = nvBLL.GetTenDn_BLL(cboMaNV.SelectedValue.ToString());
-                string mk = nvBLL.GetMatKhau_BLL(cboMaNV.SelectedValue.ToString());
-                if (txtTaiKhoan.Text == tk && txtMatKhau.Text == mk)
-                {
-                    MessageBox.Show("Đăng Nhập Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    frm_Main main = new frm_Main();
-                    main.Show();
-                    this.Hide();
+                    string tendn = txtTaiKhoan.Text;
+                    if (nvBLL.KiemTraMaNVTonTai(tendn) != null)
+                    {
+                        string tk = nvBLL.GetTenDn_BLL(tendn);
+                        string mk = nvBLL.GetMatKhau_BLL(tendn);
+                        if (txtTaiKhoan.Text == tk && txtMatKhau.Text == mk)
+                        {
+                            string luuTenDN = tk;
+                            MessageBox.Show("Đăng Nhập Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //frm_Main main = new frm_Main(luuTenDN);
+                            //main.Show();
+                            this.Hide();
+                            // lấy trạng thái đăng nhập thành công
+                            dn = true;
+
+                            frm_HoaDon hd = new frm_HoaDon(luuTenDN);
+                            hd.Show();
+
+                        }
+                        else
+                        {
+                            dn = false;
+                            MessageBox.Show("Sai tài khoản hoặc mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        //}
+                    }
+                    else
+                    {
+                        dn = false;
+                        MessageBox.Show("Tên đăng nhập không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Sai tài khoản hoặc mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (txtTaiKhoan.Text == String.Empty)
+                    {
+                        MessageBox.Show("Bạn còn bỏ trống tài khoản", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtTaiKhoan.Focus();
+                    }
+                    if (txtMatKhau.Text == String.Empty)
+                    {
+                        MessageBox.Show("Bạn còn bỏ trống mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtMatKhau.Focus();
+                    }
                 }
-
             }
-        }
-
-        void kiemtraEmty()
-        {
-            if (cboMaNV.SelectedIndex != -1)
+            catch
             {
-                if (txtTaiKhoan.Text == String.Empty)
-                {
-                    MessageBox.Show("Bạn còn bỏ trống tài khoản", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtTaiKhoan.Focus();
-                }
-                if (txtMatKhau.Text == String.Empty)
-                {
-                    MessageBox.Show("Bạn còn bỏ trống mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtMatKhau.Focus();
-                }
-                if (txtTaiKhoan.Text == String.Empty && txtMatKhau.Text == String.Empty)
-                {
-                    MessageBox.Show("Bạn còn bỏ trống tài khoản mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtTaiKhoan.Focus();
-                }
+                MessageBox.Show("Có Vấn Đề Trong Việc Đăng Nhập", "Thông Báo");
             }
+
         }
 
-        //private void frmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
-        //{
-        //    DialogResult result;
-        //    result = MessageBox.Show("Bạn chắc chắn muốn thoát?", "Thông báo",
-        //        MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-        //    if (result == DialogResult.No)
-        //        e.Cancel = true;
-        //}
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            ThucThi_DangNhap();
+        }
+
+       
+        private void frmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result;
+            result = MessageBox.Show("Bạn chắc chắn muốn thoát?", "Thông báo",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.No)
+                e.Cancel = true;
+        }
 
         private void txtTaiKhoan_Leave(object sender, EventArgs e)
         {
@@ -128,6 +124,34 @@ namespace DoAnPTPM
             else
             {
                 errorProvider1.Clear();
+            }
+        }
+
+
+        private void txtMatKhau_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                ThucThi_DangNhap();
+            }
+        }
+
+        private void frmDangNhap_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result;
+            result = MessageBox.Show("Bạn chắc chắn muốn thoát?", "Thông báo",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void txtTaiKhoan_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                ThucThi_DangNhap();
             }
         }
     }

@@ -34,7 +34,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(692, 497);
+            this.ClientSize = new System.Drawing.Size(588, 261);
             this.Name = "frm_PhieuNhap";
             this.Text = "frm_PhieuNhap";
             this.ResumeLayout(false);
@@ -42,5 +42,6 @@
         }
 
         #endregion
+
     }
 }

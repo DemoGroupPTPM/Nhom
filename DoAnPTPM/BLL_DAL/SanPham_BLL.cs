@@ -88,7 +88,8 @@ namespace BLL_DAL
 
         public decimal GetDonGia(string masp)
         {
-            var h = from n in qlch.SANPHAMs where (n.MASP == masp) select n.DONGIA;
+            var h = (from n in qlch.SANPHAMs where (n.MASP == masp) select n.DONGIA).FirstOrDefault();
+           // var  h= qlch.SANPHAMs.Where(n => (n.MASP == masp)).Select(n => n.DONGIA).FirstOrDefault();
             decimal a = Convert.ToDecimal(h);
             return a;
         }

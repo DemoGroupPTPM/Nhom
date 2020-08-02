@@ -47,7 +47,7 @@ namespace DoAnPTPM
             txtMaNV.Text = manv_dn;
             SinhMaHDTuDong();
             dateTimePicker1.Value = DateTime.Now;
-            dataGridViewHoaDon.DefaultCellStyle.ForeColor = Color.Red;
+           
         }
 
         private void loadDataHD()
@@ -64,13 +64,7 @@ namespace DoAnPTPM
             cboMaKH.ValueMember = "MAKHACHHANG";
             cboMaKH.SelectedIndex = -1;
         }
-        //void loadNhanVien_cbo()
-        //{
-        //    cboMaNV.DataSource = nv_bll.LoadNhanVien_BLL();
-        //    cboMaNV.DisplayMember = "TENNV";
-        //    cboMaNV.ValueMember = "MANV";
-        //    cboMaNV.SelectedIndex = -1;
-        //}
+   
 
         private void toolStripButton6_Click(object sender, EventArgs e)
         {
@@ -124,7 +118,7 @@ namespace DoAnPTPM
                 ngaylap = dateTimePicker1.Value;
 
                 // kt xem textbox có bị bỏ trống không
-                if (mahd != string.Empty && cboMaKH.SelectedIndex != -1 && manv != string.Empty)
+                if (mahd != string.Empty && cboMaKH.SelectedIndex != -1 && manv != string.Empty && txtMaNV.Text != string.Empty)
                 {
                     DialogResult result;
                     result = MessageBox.Show("Bạn Có Muốn Tạo Hóa Đơn " + mahd + "?",
@@ -169,8 +163,6 @@ namespace DoAnPTPM
         {
              ThucThi_TaoHD();
           
-            //string a = hd_bll.SinhMaHD();
-            //MessageBox.Show("day là mã sinh tự động" + a);
         }
 
         private void toolStripSua_Click(object sender, EventArgs e)
@@ -278,7 +270,10 @@ namespace DoAnPTPM
 
         private void cboMaSP_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if(cboMaSP.SelectedIndex != -1)
+            {
+                txtDonGia.Text =Convert.ToString( sp_bll.GetDonGia(cboMaSP.SelectedValue.ToString()));
+            }
         }
     }
 }

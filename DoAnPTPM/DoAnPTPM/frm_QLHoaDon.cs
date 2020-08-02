@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DoAnPTPM
 {
-    public partial class frm_NCC : Form
+    public partial class frm_QLHoaDon : Form
     {
-        public frm_NCC()
+        public frm_QLHoaDon()
         {
             InitializeComponent();
         }

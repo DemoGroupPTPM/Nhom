@@ -5,14 +5,13 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DoAnPTPM
 {
-    public partial class frm_NCC : Form
+    public partial class frm_GiaoDien : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public frm_NCC()
+        public frm_GiaoDien()
         {
             InitializeComponent();
         }

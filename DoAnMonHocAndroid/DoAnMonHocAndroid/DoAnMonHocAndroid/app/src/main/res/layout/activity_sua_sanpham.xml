@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layout_Suasp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layout_suaimg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="20dp"
+                    android:src="@drawable/ic_noti" />
+            </RelativeLayout>
+            //mã hàng
+
+            <RelativeLayout
+                android:id="@+id/layout_Sua_mahang"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layout_suaimg"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:id="@+id/Sua_mahang"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="Mã Hàng"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_Sua_mahang"
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_toRightOf="@+id/Sua_mahang"
+                    android:hint="Nhập mã hàng"
+                    android:textColorHint="#CFD8D7" />
+
+
+            </RelativeLayout>
+            //tên hàng
+
+            <RelativeLayout
+                android:id="@+id/layout_Sua_tenhang"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layout_Sua_img"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:id="@+id/Sua_tenhang"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="Tên Hàng"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_tenhang"
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_toRightOf="@+id/Sua_tenhang"
+                    android:hint="Nhập tên hàng"
+                    android:textColorHint="#CFD8D7" />
+            </RelativeLayout>
+            //loại hàng
+
+            <RelativeLayout
+                android:id="@+id/layout_Sua_loaihang"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layout_Sua_img"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:id="@+id/Sua_loaihang"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="Mã Loại"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_toRightOf="@+id/Sua_loaihang"
+                    android:hint="chọn mã loại"
+                    android:textColorHint="#CFD8D7" />
+            </RelativeLayout>
+            //giá bán
+
+            <RelativeLayout
+                android:id="@+id/layout_Sua_gia"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layout_Sua_img"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:id="@+id/Sua_gia"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="Gía bán"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_Sua_gia"
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_toRightOf="@+id/Sua_gia"
+                    android:hint="0"
+                    android:textColorHint="#989C9B" />
+            </RelativeLayout>
+            //đơn vị tính
+
+            <RelativeLayout
+                android:id="@+id/layout_Sua_dvt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layout_Sua_img"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:id="@+id/Sua_dvt"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="Đơn vị tính"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_Sua_dvt"
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_toRightOf="@+id/Sua_dvt"
+                    android:hint="0"
+                    android:textColorHint="#CFD8D7" />
+            </RelativeLayout>
+            //tồn kho
+
+            <RelativeLayout
+                android:id="@+id/layout_Sua_tonkho"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layout_Sua_img"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:id="@+id/Sua_tonkho"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="Tồn Kho"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_Sua_tonkho"
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_toRightOf="@+id/Sua_tonkho"
+                    android:hint="0"
+                    android:textColorHint="#CFD8D7" />
+            </RelativeLayout>
+            //bảo hành
+
+            <RelativeLayout
+                android:id="@+id/layout_Sua_baohanh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layout_Sua_img"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:id="@+id/Sua_baohanh"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="Bảo hành"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_Sua_baohanh"
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_toRightOf="@+id/Sua_baohanh"
+                    android:hint="0"
+                    android:textColorHint="#CFD8D7" />
+            </RelativeLayout>
+            //NCC
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layout_img"
+                android:id="@+id/layout_Sua_NCC"
+                >
+                <TextView
+                    android:id="@+id/Sua_NCC"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="Nhà Cung Cấp"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    />
+                <Spinner
+                    android:layout_width="400dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/Sua_NCC"
+                    android:id="@+id/edit_Sua_NCC"
+                    android:hint="0"
+                    android:textColorHint="#CFD8D7"
+                    />
+            </RelativeLayout>
+            <Button
+                android:layout_marginTop="30dp"
+                android:id="@+id/btnLuuSuaSP"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Lưu" />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/layout_ma"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mã Nhà Cung Cấp:  "
+            />
+        <TextView
+            android:id="@+id/txtMaNCC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MA NCC"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_ten"
+        android:layout_below="@+id/layout_ma"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên Nhà Cung Cấp :  "
+            />
+        <TextView
+            android:id="@+id/txtTenNCC"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tên nHÀ CUNG CẤP"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_DiaChi"
+        android:layout_below="@+id/layout_ten"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Địa Chỉ :  "
+            />
+        <TextView
+            android:id="@+id/txtDC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dịa chỉ   "
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_dienthoai"
+        android:layout_below="@+id/layout_DiaChi"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Điện Thoại :  "
+            />
+        <TextView
+            android:id="@+id/txtSDT"
+            android:layout_marginRight="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đơn Gía"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_chuthich"
+        android:layout_below="@+id/layout_dienthoai"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chú Thích :  "
+            />
+        <TextView
+            android:id="@+id/txtCT"
+            android:layout_marginRight="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chú Thích"
+            />
+    </LinearLayout>
+
+    <ImageView
+
+        android:id="@+id/btnSuaNCC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_baseline_edit_24"
+        android:layout_alignParentTop="true"/>
+
+    <ImageView
+        android:paddingTop="25dp"
+        android:id="@+id/btnXoaNCC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+      android:layout_marginTop="20dp"
+        android:src="@drawable/ic_baseline_delete_forever_24"
+        android:layout_below="@+id/btnSuaNCC"
+        />
+</RelativeLayout>

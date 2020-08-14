@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <!--        MANCC nvarchar(50) PRIMARY KEY,-->
+        <!--        TENNCC NVARCHAR(100) ,-->
+        <!--        DIACHI NVARCHAR(100),-->
+        <!--        DIENTHOAI char(10),-->
+        <!--        CHUTHICH NVARCHAR(100),-->
+
+        <LinearLayout
+            android:id="@+id/layout_suaNCC"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/layout_sua_maNCC">
+                <TextView
+                    android:id="@+id/them_sua_maNCC"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="Mã NCC"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    />
+                <EditText
+                    android:layout_width="400dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/them_sua_maNCC"
+                    android:id="@+id/edit_sua_maNCC"
+                    android:hint="Nhập mã ncc"
+                    android:textColorHint="#CFD8D7"
+                    />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/layout_sua_tenNCC">
+                <TextView
+                    android:id="@+id/sua_tenNCC"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="Tên NCC"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    />
+                <EditText
+                    android:layout_width="400dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/sua_tenNCC"
+                    android:id="@+id/edit_sua_tenNCC"
+                    android:hint="Nhập tên ncc"
+                    android:textColorHint="#CFD8D7"
+                    />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/layout_sua_diachiNCC">
+                <TextView
+                    android:id="@+id/sua_diachiNCC"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="Địa Chỉ NCC"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    />
+                <EditText
+                    android:layout_width="400dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/sua_diachiNCC"
+                    android:id="@+id/edit_sua_diachiNCC"
+                    android:hint="Nhập địa chỉ ncc"
+                    android:textColorHint="#CFD8D7"
+                    />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/layout_sua_SDTNCC">
+                <TextView
+                    android:id="@+id/sua_SDTNCC"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="SĐT NCC"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    />
+                <EditText
+                    android:layout_width="400dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/sua_SDTNCC"
+                    android:id="@+id/edit_sua_SDTNCC"
+                    android:hint="Nhập SDT ncc"
+                    android:textColorHint="#CFD8D7"
+                    />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/layout_sua_chuthichNCC">
+                <TextView
+                    android:id="@+id/sua_chuthichNCC"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:text="chú thích"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    />
+                <EditText
+                    android:layout_width="400dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_height="100dp"
+                    android:layout_toRightOf="@+id/sua_chuthichNCC"
+                    android:id="@+id/edit_sua_chuthichNCC"
+                    android:hint="Nhập "
+                    android:textColorHint="#CFD8D7"
+                    />
+
+
+            </RelativeLayout>
+
+            //button
+            <Button
+                android:layout_marginTop="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Lưu"
+                android:id="@+id/btnLuuSuaNCC"
+                />
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.doanmonhoc">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".LoaiHang.TrangThemLoaiHang"></activity>
+        <activity android:name=".LoaiHang.LoaiHang_List"></activity>
+        <activity android:name=".KhachHnag.TrangSuaKhachHang"></activity>
+        <activity android:name=".KhachHnag.TrangThemKhachHang"></activity>
+        <activity android:name=".KhachHnag.KhachHang_List"></activity>
+        <activity android:name=".NhaCungCap.TrangSuaNhaCungCap"></activity>
+        <activity android:name=".NhaCungCap.TrangThemNhaCungCap"></activity>
+        <activity android:name=".NhaCungCap.NhaCungCap_List"></activity>
+      <activity android:name=".HoaDon.HoaDon_List"></activity>
+        <activity android:name=".TrangThongBao"></activity>
+        <activity android:name=".TrangInFo"></activity>
+        <activity android:name=".SanPham.TrangSuaSanPham"></activity>
+        <activity android:name=".TrangChuActivity" />
+        <activity android:name=".SanPham.ChiTiet_SP" />
+        <activity android:name=".SanPham.TrangSanPham_list" />
+        <activity android:name=".SanPham.TrangThemSP_SanPham" />
+        <activity android:name=".TrangDangKy" />
+        <activity android:name=".TrangChaoMung">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".TrangDangNhap" />
+    </application>
+
+</manifest>

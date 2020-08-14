@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/trangchu"
+            android:title="Trang Chủ"
+            android:icon="@drawable/ic_baseline_dashboard_24"
+            />
+        <item
+            android:id="@+id/sanpham"
+            android:title="Sản Phẩm"
+            android:icon="@drawable/ic_baseline_assignment_turned_in_24"
+            />
+
+        <item
+            android:id="@+id/dathang"
+            android:title="Hoá Đơn"
+            android:icon="@drawable/bill"
+            />
+<!--        <item-->
+<!--            android:id="@+id/doanhthu"-->
+<!--            android:title="Doanh Thu"-->
+<!--            android:icon="@drawable/ic_baseline_assignment_turned_in_24"-->
+<!--            />-->
+
+    </group>
+
+    <item android:title="People">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/ncc"
+                    android:title="Nhà Cung Cấp"
+                    android:icon="@drawable/ic_baseline_group_24"
+                    />
+                <item
+                    android:id="@+id/khachhang"
+                    android:title="Khách hàng"
+                    android:icon="@drawable/ic_baseline_group_24"
+                    />
+                <item
+                    android:id="@+id/nhanvien"
+                    android:title="Nhân Viên"
+                    android:icon="@drawable/ic_baseline_group_24"
+                    />
+            </group>
+        </menu>
+
+    </item>
+    <item android:title="Profile">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/caidat"
+                    android:title="Cài Đặt"
+                    android:icon="@drawable/ic_baseline_settings_24"
+                    />
+                <item
+                    android:id="@+id/dangxuat"
+                    android:title="Đăng Xuất"
+                    android:icon="@drawable/ic_baseline_exit_to_app_24"
+                    />
+
+            </group>
+        </menu>
+
+    </item>
+
+
+</menu>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrangDangKy"
+    android:orientation="horizontal"
+    android:background="@drawable/hinhnen">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp">
+        <RelativeLayout
+            android:id="@+id/rlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/textviewDangKy_dangky"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="Register"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="35dp"
+                    android:textStyle="bold"
+                    ></TextView>
+
+                <EditText
+                    android:id="@+id/edtUserName_dangky"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/edit"
+                    android:drawableLeft="@drawable/ic_person"
+                    android:drawablePadding="10dp"
+                    android:hint="User name"
+                    android:inputType="textEmailAddress"
+                    android:padding="20dp"
+                    android:textColorHint="#2CA7E0"
+                    android:layout_below="@+id/textviewDangKy_dangky"
+                    ></EditText>
+            <EditText
+                android:id="@+id/edtPass_dangky"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/edit"
+                android:drawableLeft="@drawable/ic_person"
+                android:drawablePadding="10dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="20dp"
+                android:textColorHint="#2CA7E0"
+                android:layout_below="@+id/edtUserName_dangky"
+                ></EditText>
+            <EditText
+                android:id="@+id/edtRePass_dangky"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/edit"
+                android:drawableLeft="@drawable/ic_person"
+                android:drawablePadding="10dp"
+                android:hint="Retype Password"
+                android:inputType="textPassword"
+                android:padding="20dp"
+                android:textColorHint="#2CA7E0"
+                android:layout_below="@+id/edtPass_dangky"
+                ></EditText>
+            <EditText
+                android:id="@+id/edtEmail_dangky"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/edit"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="10dp"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="20dp"
+                android:textColorHint="#2CA7E0"
+                android:layout_below="@+id/edtRePass_dangky"
+                ></EditText>
+
+            <Button
+                android:id="@+id/btnDangKy_dangky"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/edtEmail_dangky"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/bgui"
+                android:text="Sign Up"
+                android:textColor="@color/colorWhite"
+                android:textSize="30dp"></Button>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

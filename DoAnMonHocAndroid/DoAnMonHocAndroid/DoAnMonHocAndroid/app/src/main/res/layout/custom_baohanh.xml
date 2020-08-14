@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:id="@+id/layout_ma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mã Loại:  "
+            />
+        <TextView
+            android:id="@+id/txtMaBH"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:text="Mã BAOHANH"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:id="@+id/layout_ten"
+        android:layout_below="@+id/layout_ma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mã Khách Hàng :  "
+            />
+
+        <TextView
+            android:id="@+id/txtMakh_bh"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:text="ten" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btnSuaBH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_baseline_edit_24"
+        android:layout_alignParentTop="true"/>
+    <ImageView
+
+        android:id="@+id/btnXoaBH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_baseline_delete_forever_24"
+        android:layout_below="@+id/btnSuaBH"
+        />
+</RelativeLayout>

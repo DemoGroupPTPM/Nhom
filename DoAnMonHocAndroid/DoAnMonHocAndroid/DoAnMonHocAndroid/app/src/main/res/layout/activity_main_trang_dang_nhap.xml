@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hinhnen"
+    tools:context=".TrangDangNhap">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="20dp">
+
+
+        <ImageView
+            android:id="@+id/imgview_logo_dangnhap"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="80dp"
+            android:src="@drawable/logotruong"></ImageView>
+
+
+        <TextView
+            android:id="@+id/textviewWelcome_dangnhap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgview_logo_dangnhap"
+            android:layout_marginLeft="62dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Welcome to APP"
+            android:textColor="#2CA7E0"
+            android:textSize="32dp"
+            android:textStyle="bold"></TextView>
+
+
+        <EditText
+            android:id="@+id/edtUserName_dangnhap"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textviewWelcome_dangnhap"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/edit"
+            android:drawableLeft="@drawable/ic_person"
+            android:drawablePadding="10dp"
+            android:hint="User name"
+            android:inputType="textEmailAddress"
+            android:padding="20dp"
+            android:textColorHint="#2CA7E0"></EditText>
+
+        <EditText
+            android:id="@+id/edtPass_dangnhap"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtUserName_dangnhap"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/edit"
+            android:drawableLeft="@drawable/ic_person"
+            android:drawablePadding="10dp"
+            android:hint="Pass word"
+            android:inputType="textPassword"
+            android:padding="20dp"
+            android:textColorHint="#2CA7E0"></EditText>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkGhiNho"
+            android:layout_below="@+id/edtPass_dangnhap"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:text="Ghi nhớ đăng nhập"
+            android:textSize="20dp"
+            android:textColor="#080909"
+            />
+        
+        <TextView
+            android:id="@+id/textviewForgotPass_dangnhap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkGhiNho"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="Forgot Password"
+            android:textColor="#2CA7E0"
+            android:textSize="20dp"></TextView>
+
+        <Button
+            android:id="@+id/btnDangNhap_dangnhap"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/textviewForgotPass_dangnhap"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bgui"
+            android:text="Login"
+            android:textSize="30dp"
+            android:textColor="@color/colorWhite"></Button>
+
+        <TextView
+            android:id="@+id/textviewdangky_dangnhap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnDangNhap_dangnhap"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/btnDangKy_dangnhap"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="Or Register "
+            android:textColor="@color/colorBlue"
+            android:textSize="20dp"></TextView>
+
+        <ImageButton
+            android:id="@+id/btnDangKy_dangnhap"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/btnDangNhap_dangnhap"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/bgui"
+            android:src="@drawable/daucong" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

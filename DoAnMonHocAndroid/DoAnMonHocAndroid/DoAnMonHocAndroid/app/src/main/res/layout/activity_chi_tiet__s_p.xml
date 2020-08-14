@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/CTSP_img"
+                android:layout_width="match_parent"
+                android:layout_height="176dp"
+                android:padding="20dp"
+                android:src="@mipmap/ic_launcher"/>
+            <TextView
+                android:textColor="#0B0A0B"
+                android:textStyle="bold"
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="tên sản phẩm"
+                android:id="@+id/CTSP_tensp"
+                android:textSize="20dp"
+                android:gravity="center_vertical"
+                />
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_CTSP_mahang"
+                >
+                <TextView
+                    android:id="@+id/CTSP_mahang"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="Mã sản phẩm"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:layout_width="400dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/CTSP_mahang"
+                    android:hint="mã sản phẩm"
+                    android:id="@+id/masp"
+                    />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_CTSP_loaihang"
+                >
+                <TextView
+                    android:id="@+id/CTSP_loaihang"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="Mã Loại"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:layout_width="400dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/CTSP_loaihang"
+                    android:hint="mã loại hàng"
+                    android:id="@+id/loaihang"
+                    />
+
+
+            </RelativeLayout>
+            //giá bán
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_CTSP_gia"
+                >
+                <TextView
+                    android:id="@+id/CTSP_gia"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="Gía bán"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/gia"
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_toRightOf="@+id/CTSP_gia"
+                    android:hint="giá" />
+            </RelativeLayout>
+
+
+            //tồn kho
+
+            <RelativeLayout
+                android:id="@+id/layout_CTSP_tonkho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:id="@+id/lbl_tonkho"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="Số lượng"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/CTSP_soluong"
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_toRightOf="@+id/lbl_tonkho"
+                    android:hint="0"
+                    android:textColorHint="#CFD8D7" />
+            </RelativeLayout>
+            //bh
+
+            <RelativeLayout
+                android:id="@+id/layout_CTSP_baohanh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:id="@+id/lbl_baohanh"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="Bảo hành"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/CTSP_baohanh"
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_toRightOf="@+id/lbl_baohanh"
+                    android:hint="0"
+                    android:textColorHint="#CFD8D7" />
+            </RelativeLayout>
+            //NCC
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_img"
+                android:id="@+id/layout_CTSP_NCC"
+                >
+                <TextView
+                    android:id="@+id/lbl_NCC"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="Nhà Cung Cấp"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:gravity="center_vertical"
+                    android:layout_width="400dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/lbl_NCC"
+                    android:id="@+id/CTSP_NCC"
+                    android:hint="0"
+                    android:textColorHint="#CFD8D7"
+                    />
+
+                <LinearLayout
+                    android:layout_below="@+id/CTSP_NCC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerInParent="true">
+
+                    <Button
+                        android:layout_gravity="center"
+                        android:id="@+id/btnXoa_CTSP"
+
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:text="Xóa "
+                        android:background="@drawable/button"
+                        android:textSize="20dp"></Button>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

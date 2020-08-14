@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F0F0"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:padding="16dp">
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@drawable/info"
+            android:drawablePadding="10dp"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            android:padding="18dp"
+            android:textColorHint="@android:color/black"
+            />
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+
+            android:drawableLeft="@drawable/email"
+            android:drawablePadding="10dp"
+            android:hint="Email"
+            android:layout_marginTop="8dp"
+            android:inputType="textPersonName"
+            android:padding="18dp"
+            android:textColorHint="@android:color/background_dark"
+            />
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:drawableLeft="@drawable/user"
+            android:drawablePadding="10dp"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            android:textAllCaps="false"
+            android:padding="18dp"
+            android:textColorHint="@android:color/background_dark"
+            />
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+
+            android:drawableLeft="@drawable/key"
+            android:drawablePadding="10dp"
+            android:hint="Password"
+            android:inputType="numberPassword"
+            android:padding="18dp"
+            android:textColorHint="@android:color/background_dark"
+            />
+        <RadioGroup
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="18dp"
+            android:id="@+id/radioGroup"
+
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Male"
+                android:checked="true"
+                android:textSize="18sp"
+                android:buttonTint="@android:color/background_dark"
+                android:textColorHint="@android:color/background_dark"
+                android:id="@+id/radiobutton1"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:buttonTint="@android:color/background_dark"
+                android:textColor="@android:color/background_dark"
+                android:id="@+id/radiobutton2"/>
+
+
+        </RadioGroup>
+        <Button
+            android:id="@+id/btnDangXuat"
+            android:layout_below="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:padding="18dp"
+            android:background="#999999"
+            android:text="Đăng xuất"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

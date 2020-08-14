@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <!--   MAKHACHHANG nvarchar(50) PRIMARY KEY,-->
+        <!--	TENKHACHHANG NVARCHAR(100),-->
+        <!--	DIACHI NVARCHAR(MAX),-->
+        <!--	DIENTHOAI NVARCHAR(10),-->
+        <!--	EMAIL NVARCHAR(50) NULL,-->
+
+        <LinearLayout
+            android:id="@+id/layout_themKH"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/layout_maKH">
+                <TextView
+                    android:id="@+id/them_maKH"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="Mã Khách hàng"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    />
+                <EditText
+                    android:layout_width="400dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/them_maKH"
+                    android:id="@+id/edit_them_maKH"
+                    android:hint="Nhập mã Khách hàng"
+                    android:textColorHint="#CFD8D7"
+                    />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/layout_tenKH">
+                <TextView
+                    android:id="@+id/them_tenKH"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="Tên Khách Hàng"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    />
+                <EditText
+                    android:layout_width="400dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/them_tenKH"
+                    android:id="@+id/edit_them_tenKH"
+                    android:hint="Nhập tên Khách"
+                    android:textColorHint="#CFD8D7"
+                    />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/layout_diachiKH">
+                <TextView
+                    android:id="@+id/them_diachiKH"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="Địa Chỉ "
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    />
+                <EditText
+                    android:layout_width="400dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/them_diachiKH"
+                    android:id="@+id/edit_them_diachiKH"
+                    android:hint="Nhập địa chỉ "
+                    android:textColorHint="#CFD8D7"
+                    />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/layout_SDTKH">
+                <TextView
+                    android:id="@+id/them_SDTKH"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="SĐT "
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    />
+                <EditText
+                    android:layout_width="400dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/them_SDTKH"
+                    android:id="@+id/edit_them_SDTKH"
+                    android:hint="Nhập SDT "
+                    android:textColorHint="#CFD8D7"
+                    />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/layout_EmailKH">
+                <TextView
+                    android:id="@+id/them_EmailKH"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="Email "
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    />
+                <EditText
+                    android:layout_width="400dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/them_EmailKH"
+                    android:id="@+id/edit_them_EmailKH"
+                    android:hint="Nhập EmailKH "
+                    android:textColorHint="#CFD8D7"
+                    />
+
+
+            </RelativeLayout>
+
+            //button
+            <Button
+                android:layout_marginTop="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Lưu"
+                android:id="@+id/btnLuuThemKH"
+                />
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

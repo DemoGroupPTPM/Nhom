@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/layout_themsp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_img"
+                >
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="20dp"
+                    android:src="@drawable/ic_noti"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layout_img"
+                android:id="@+id/layout_mahang">
+                <TextView
+                    android:id="@+id/mahang"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="Mã sản phẩm"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    />
+                <EditText
+                    android:layout_width="400dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/mahang"
+                    android:id="@+id/edit_mahang"
+                    android:hint="Nhập mã hàng"
+                    android:textColorHint="#CFD8D7"
+                    />
+
+
+            </RelativeLayout>
+            //tên hàng
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layout_img"
+                android:id="@+id/layout_tenhang"
+                >
+                <TextView
+                    android:id="@+id/tenhang"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="Tên sản phẩm"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    />
+                <EditText
+                    android:layout_width="400dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/tenhang"
+                    android:id="@+id/edit_tenhang"
+                    android:hint="Nhập tên hàng"
+                    android:textColorHint="#CFD8D7"
+                    />
+            </RelativeLayout>
+            //nhóm hàng
+            <RelativeLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layout_img"
+                android:id="@+id/layout_loaihang"
+                >
+                <TextView
+                    android:id="@+id/them_loaihang"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="Loại hàng"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spLoaiHang"
+                    android:layout_width="400dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/them_loaihang"
+                    android:hint="chọn loại hàng"
+                    android:textColorHint="#CFD8D7"
+                    />
+            </RelativeLayout>
+            //giá bán
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layout_img"
+                android:id="@+id/layout_gia"
+                >
+                <TextView
+                    android:id="@+id/them_gia"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="Gía bán"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    />
+                <EditText
+                    android:inputType="number"
+                    android:layout_width="400dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/them_gia"
+                    android:id="@+id/edit_them_gia"
+                    android:hint="0"
+                    android:textColorHint="#989C9B"
+                    />
+            </RelativeLayout>
+
+            //tồn kho
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layout_img"
+                android:id="@+id/layout_them_tonkho"
+                >
+                <TextView
+                    android:id="@+id/them_tonkho"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="Số lượng"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    />
+
+                <EditText
+                    android:id="@+id/edit_them_soluong"
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_toRightOf="@+id/them_tonkho"
+                    android:hint="0"
+                    android:textColorHint="#CFD8D7"
+                    android:inputType="number"/>
+            </RelativeLayout>
+            //bảo hành
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layout_img"
+                android:id="@+id/layout_them_baohanh"
+                >
+                <TextView
+                    android:id="@+id/them_baohanh"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="Bảo hành"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    />
+                <EditText
+                    android:layout_width="400dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/them_baohanh"
+                    android:id="@+id/edit_them_baohanh"
+                    android:hint="0"
+                    android:textColorHint="#CFD8D7"
+                    />
+            </RelativeLayout>
+            //NCC
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layout_img"
+                android:id="@+id/layout_them_NCC"
+                >
+                <TextView
+                    android:id="@+id/them_NCC"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="Nhà Cung Cấp"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    />
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:layout_width="400dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/them_NCC"
+                    android:id="@+id/spNhaCC"
+                    android:hint="0"
+                    android:textColorHint="#CFD8D7"
+                    />
+            </RelativeLayout>
+            <Button
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Thêm sản phẩm"
+                android:id="@+id/btnThemSP"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

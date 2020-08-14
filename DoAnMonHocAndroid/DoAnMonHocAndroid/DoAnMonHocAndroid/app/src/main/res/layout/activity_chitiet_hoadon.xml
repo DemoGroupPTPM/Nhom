@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <!--    MAHD nvarchar(50),-->
+    <!--    MAHANG NVARCHAR(50),-->
+    <!--    DONGIA MONEY,-->
+    <!--    SOLUONG INT,-->
+    <!--    DONVITINH NVARCHAR(10) default N'Cái' ,-->
+    <!--    THANHTIEN MONEY,-->
+    <LinearLayout
+        android:id="@+id/layout_CTHD"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout_CTHD_maHD">
+            <TextView
+                android:id="@+id/lbl_maHD"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="Mã Hóa Đơn"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="400dp"
+                android:layout_marginLeft="50dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/lbl_maHD"
+                android:id="@+id/CT_maHD"
+                android:hint="Nhập mã HD"
+                android:textColorHint="#CFD8D7"
+                />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout_CTHD_mahang">
+            <TextView
+                android:id="@+id/lbl_CTHD_mahang"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="Mã Hàng"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="400dp"
+                android:layout_marginLeft="50dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/lbl_CTHD_mahang"
+                android:id="@+id/CTHD_mahang"
+                android:hint="Nhập mã Hàng"
+                android:textColorHint="#CFD8D7"
+                />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout_CTHD_dongia">
+            <TextView
+                android:id="@+id/lbl_CTHD_dongia"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="Đơn Gía"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="400dp"
+                android:layout_marginLeft="50dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/lbl_CTHD_dongia"
+                android:id="@+id/CTHD_dongia"
+                android:hint="Nhập giá"
+                android:textColorHint="#CFD8D7"
+                />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout_CTHD_DVT">
+            <TextView
+                android:id="@+id/lbl_CTHD_DVT"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="DVT"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="400dp"
+                android:layout_marginLeft="50dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/lbl_CTHD_DVT"
+                android:id="@+id/CTHD_DVT"
+                android:hint="Nhập DVT"
+                android:textColorHint="#CFD8D7"
+                />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout_CTHD_thanhtien">
+            <TextView
+                android:id="@+id/lbl_CTHD_thanhtien"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="Thành Tiền"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="400dp"
+                android:layout_marginLeft="50dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/lbl_CTHD_thanhtien"
+                android:id="@+id/CTHD_thanhtien"
+                android:hint="Nhập thành tiền"
+                android:textColorHint="#CFD8D7"
+                />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</ScrollView>

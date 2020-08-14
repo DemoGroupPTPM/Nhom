@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/layout_ma"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mã Khách Hàng:  "
+            />
+        <TextView
+            android:id="@+id/txtMaKH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MA NCC"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_ten"
+        android:layout_below="@+id/layout_ma"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên Khách Hàng :  "
+            />
+        <TextView
+            android:id="@+id/txtTenKH"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tên nHÀ CUNG CẤP"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_DiaChi"
+        android:layout_below="@+id/layout_ten"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Địa Chỉ :  "
+            />
+        <TextView
+            android:id="@+id/txtDCKH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dịa chỉ   "
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_dienthoai"
+        android:layout_below="@+id/layout_DiaChi"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Điện Thoại :  "
+            />
+        <TextView
+            android:id="@+id/txtSDTKH"
+            android:layout_marginRight="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đơn Gía"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_email"
+        android:layout_below="@+id/layout_dienthoai"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email :  "
+            />
+        <TextView
+            android:id="@+id/txtemailKH"
+            android:layout_marginRight="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chú Thích"
+            />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/btnSuaKH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_baseline_edit_24"
+        android:layout_alignParentTop="true"/>
+    <ImageView
+        android:paddingTop="40dp"
+        android:id="@+id/btnXoaKH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_baseline_delete_forever_24"
+        android:layout_below="@+id/btnSuaKH"
+        />
+</RelativeLayout>

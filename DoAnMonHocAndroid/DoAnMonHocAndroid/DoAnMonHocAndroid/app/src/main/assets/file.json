@@ -1,0 +1,14 @@
+{
+  "NVs":
+  [
+    {
+      "TenDn": "admin",
+      "MatKhau" : "123"
+    },
+    {
+      "TenDn": "hi",
+      "MatKhau" : "1243"
+    }
+
+  ]
+}

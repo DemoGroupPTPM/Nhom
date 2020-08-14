@@ -1,0 +1,13 @@
+D:\HocTap\ptpm\KIEMTRA\DoAnMonPTPM\BLL_DAL\bin\Debug\BLL_DAL.dll.config
+D:\HocTap\ptpm\KIEMTRA\DoAnMonPTPM\BLL_DAL\bin\Debug\BLL_DAL.dll
+D:\HocTap\ptpm\KIEMTRA\DoAnMonPTPM\BLL_DAL\bin\Debug\BLL_DAL.pdb
+D:\HocTap\ptpm\KIEMTRA\DoAnMonPTPM\BLL_DAL\obj\Debug\BLL_DAL.csprojAssemblyReference.cache
+D:\HocTap\ptpm\KIEMTRA\DoAnMonPTPM\BLL_DAL\obj\Debug\BLL_DAL.csproj.CoreCompileInputs.cache
+D:\HocTap\ptpm\KIEMTRA\DoAnMonPTPM\BLL_DAL\obj\Debug\BLL_DAL.dll
+D:\HocTap\ptpm\KIEMTRA\DoAnMonPTPM\BLL_DAL\obj\Debug\BLL_DAL.pdb
+D:\TaiXuong\DoAnMonPTPM\BLL_DAL\bin\Debug\BLL_DAL.dll.config
+D:\TaiXuong\DoAnMonPTPM\BLL_DAL\bin\Debug\BLL_DAL.dll
+D:\TaiXuong\DoAnMonPTPM\BLL_DAL\bin\Debug\BLL_DAL.pdb
+D:\TaiXuong\DoAnMonPTPM\BLL_DAL\obj\Debug\BLL_DAL.csproj.CoreCompileInputs.cache
+D:\TaiXuong\DoAnMonPTPM\BLL_DAL\obj\Debug\BLL_DAL.dll
+D:\TaiXuong\DoAnMonPTPM\BLL_DAL\obj\Debug\BLL_DAL.pdb

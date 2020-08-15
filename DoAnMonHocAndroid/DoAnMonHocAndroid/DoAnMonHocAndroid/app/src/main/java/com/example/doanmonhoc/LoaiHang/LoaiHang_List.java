@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.viewpager.widget.ViewPager;
 
 
@@ -23,8 +24,13 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.doanmonhoc.NhaCungCap.NhaCungCap;
+import com.example.doanmonhoc.NhaCungCap.NhaCungCap_Adapter;
 import com.example.doanmonhoc.R;
+import com.example.doanmonhoc.SanPham.SanPham_Adapter;
+import com.example.doanmonhoc.SanPham.TrangSanPham_list;
 import com.example.doanmonhoc.SanPham.TrangThemSP_SanPham;
+import com.example.doanmonhoc.SanPham.sanpham;
 import com.example.doanmonhoc.TrangThongBao;
 import com.google.android.material.tabs.TabLayout;
 
@@ -40,7 +46,7 @@ public class LoaiHang_List extends AppCompatActivity {
     ViewPager viewPagerHome;
 
     TextView maloai, tenloai; ;
-    String url ="http://192.168.100.9:5000/api/LoaiHangs";
+    String url ="http://10.160.90.109:5000/api/LoaiHangs";
     ListView lv;
     ArrayList<LoaiHang> mangLH;
     LoaiHang_Adapter customApdater;
@@ -51,7 +57,7 @@ public class LoaiHang_List extends AppCompatActivity {
         lv=(ListView) findViewById(R.id.List_loaihang);
         maloai = (TextView) findViewById(R.id.txtMaLoai);
         tenloai = (TextView) findViewById(R.id.txtTenLoai);
-     //   manhom = (TextView) findViewById(R.id.txtMaNhom_LH);
+
 
         mangLH =new ArrayList<>();
       getLoaiHang();
@@ -63,13 +69,31 @@ public class LoaiHang_List extends AppCompatActivity {
         //dòng này đê đặt tiêu đề cho actionbar
         ActionBar actionBar= getSupportActionBar();
         actionBar.setTitle("Loại Hàng");
-
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.option_sanpham,menu);
+        MenuItem menuItem = menu.findItem(R.id.thongbao);
+        SearchView searchView = (SearchView) menuItem.getActionView();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                ArrayList<LoaiHang> kh = new ArrayList<>();
+                for (LoaiHang x : mangLH)
+                {
+                    if (x.tenloai.contains(newText))
+                        kh.add(x);
+                }
+                ((LoaiHang_Adapter) lv.getAdapter()).update(kh);
+                return false;
+            }
+        });
         return true;
     }
 
@@ -91,8 +115,7 @@ public class LoaiHang_List extends AppCompatActivity {
             }
             case R.id.thongbao:
             {
-                Intent  i = new Intent(LoaiHang_List.this, TrangThongBao.class);
-                startActivity(i);
+
                 break;
             }
         }
@@ -111,10 +134,9 @@ public class LoaiHang_List extends AppCompatActivity {
                         JSONObject object = response.getJSONObject(i);
 
                         String maloait = object.getString("maloai");
-                        String manhomt = object.getString("manhomhang");
                         String tenloait = object.getString("tenloai");
 
-                       mangLH.add(new LoaiHang(maloait,manhomt,tenloait));
+                       mangLH.add(new LoaiHang(maloait,tenloait));
 
                         Log.d("AAA",""+response);
                         customApdater.notifyDataSetChanged();
@@ -136,7 +158,7 @@ public class LoaiHang_List extends AppCompatActivity {
     public void deleteLH(final String ma)
     {
 
-        String url ="http://192.168.100.9:5000/api/LoaiHangs/"+ma+"";
+        String url ="http://10.160.90.109:5000/api/LoaiHangs/"+ma+"";
 
         StringRequest deleteRequest = new StringRequest(Request.Method.DELETE, url,
                 new Response.Listener<String>()

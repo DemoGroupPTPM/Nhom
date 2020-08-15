@@ -200,23 +200,7 @@
                     android:textColorHint="#CFD8D7"
                     />
 
-                <LinearLayout
-                    android:layout_below="@+id/CTSP_NCC"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_centerInParent="true">
 
-                    <Button
-                        android:layout_gravity="center"
-                        android:id="@+id/btnXoa_CTSP"
-
-                        android:layout_width="150dp"
-                        android:layout_height="60dp"
-                        android:text="Xóa "
-                        android:background="@drawable/button"
-                        android:textSize="20dp"></Button>
-                </LinearLayout>
             </RelativeLayout>
 
 

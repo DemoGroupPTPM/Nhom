@@ -73,7 +73,7 @@
                     android:textStyle="bold"
                     />
 
-                <Spinner
+                <EditText
                     android:id="@+id/them_spMaSP_HD"
                     android:layout_width="400dp"
                     android:layout_height="50dp"
@@ -102,7 +102,7 @@
                     android:textColor="#000000"
                     android:textStyle="bold"
                     />
-                <Spinner
+                <EditText
                     android:id="@+id/them_spKH_HD"
                     android:layout_width="400dp"
                     android:layout_marginLeft="50dp"
@@ -110,34 +110,6 @@
                     android:layout_toRightOf="@+id/them_loaihang"
                     android:hint="chọn "
                     android:textColorHint="#CFD8D7"
-                    />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/layout_img"
-                android:id="@+id/layout_gia"
-                >
-                <TextView
-                    android:id="@+id/them_gia"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:text="Ngày Lập"
-                    android:gravity="center_vertical"
-                    android:textColor="#000000"
-                    android:textStyle="bold"
-                    />
-                <TextView
-
-                    android:layout_width="400dp"
-                    android:layout_marginLeft="50dp"
-                    android:layout_height="50dp"
-                    android:layout_toRightOf="@+id/them_gia"
-                    android:id="@+id/txtNgayLap_HD"
-                    android:textColorHint="#989C9B"
                     />
             </RelativeLayout>
 

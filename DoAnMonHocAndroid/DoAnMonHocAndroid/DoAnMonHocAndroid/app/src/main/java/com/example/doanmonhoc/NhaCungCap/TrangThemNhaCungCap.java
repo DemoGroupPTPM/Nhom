@@ -36,7 +36,7 @@ import java.util.ArrayList;
 
 public class TrangThemNhaCungCap extends AppCompatActivity {
     EditText mancc,tenncc,diachi,sdt,chuthich;
-    String url ="http://192.168.100.9:5000/api/NhaCungCaps";
+    String url ="http://192.168.1.108:5000/api/NhaCungCaps";
 
     ArrayList<NhaCungCap> mangncc;
     NhaCungCap_Adapter customApdater;
@@ -143,7 +143,7 @@ public class TrangThemNhaCungCap extends AppCompatActivity {
         loading.setMessage("vui lòng đợi ...");
         loading.setCanceledOnTouchOutside(false);
         loading.show();
-        String url2 ="http://192.168.100.9:5000/api/NhaCungCaps";
+        String url2 ="http://10.160.90.109:5000/api/NhaCungCaps";
         JSONObject object = new JSONObject();
         try {
             String mancct = mancc.getText().toString();

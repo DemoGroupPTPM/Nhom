@@ -44,7 +44,7 @@ public class TrangThemKhachHang extends AppCompatActivity {
 
 
     EditText makh,tenkh,diachi,dienthoai,email;
-    String url ="http://192.168.100.9:5000/api/KhachHangs";
+    String url ="http://10.160.90.109:5000/api/KhachHangs";
     Button btnluu;
     ArrayList<KhachHang> mangKH;
     KhachHang_Adapter customApdater;
@@ -153,7 +153,7 @@ public class TrangThemKhachHang extends AppCompatActivity {
         loading.setMessage("vui lòng đợi ...");
         loading.setCanceledOnTouchOutside(false);
         loading.show();
-        String url2 ="http://192.168.100.9:5000/api/KhachHangs";
+        String url2 ="http://10.160.90.109:5000/api/KhachHangs";
         JSONObject object = new JSONObject();
         try {
             String makhh = makh.getText().toString();

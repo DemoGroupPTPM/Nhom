@@ -48,7 +48,7 @@ public class BaoHanh_List extends AppCompatActivity {
     TextView ngaynhan,ngaytra;
     Button btnNgayLap,btnNgayTra;
     //Khai báo Datasource lưu trữ danh sách công việc
-    String url ="http://192.168.1.108:5000/api/BaoHanhs";
+    String url ="http://10.160.90.109:5000/api/BaoHanhs";
 
 
     ArrayList<BaoHanh> mangBH;

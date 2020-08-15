@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Z2Dcs2qsv5o/cLSq8nn+ghskk/7Buj/EzCV9d/ZVMt5+yBllqCusu7A8TRiQfVTVyDQcn4munrdKOB5OvfuBlg==",
+  "dgSpecHash": "QNJxs3knMOHsiumqePpX7BI6VeQOXfDI+/9+g/0Qlr11qBtXWxM/ulyRR/cy9gj57WF5VRE4DINtphmFQHnH9A==",
   "success": true,
-  "projectFilePath": "D:\\QLCHDT_API\\QLCHDT_API\\QLCHDT_API.csproj",
+  "projectFilePath": "D:\\DoAnMonHocAndroid\\QLCHDT_API\\QLCHDT_API\\QLCHDT_API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore\\2.1.1\\microsoft.aspnetcore.2.1.1.nupkg.sha512",

@@ -40,7 +40,7 @@ import static com.example.doanmonhoc.R.id.them_TenLoai;
 
 public class TrangThemLoaiHang extends AppCompatActivity {
 
-    String url ="http://192.168.100.9:5000/api/LoaiHangs";
+    String url ="http://10.160.90.109:5000/api/LoaiHangs";
     EditText maloai,manhom,tenlaoi;
     Button btnluu;
     ArrayList<LoaiHang> mangLH;
@@ -55,11 +55,11 @@ public class TrangThemLoaiHang extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //dòng này đê đặt tiêu đề cho actionbar
         ActionBar actionBar= getSupportActionBar();
-        actionBar.setTitle("Thêm Sản Phẩm");
+        actionBar.setTitle("Thêm Loại Hàng");
 
         maloai = (EditText) findViewById(R.id.them_MaLoai) ;
         tenlaoi = (EditText) findViewById(them_TenLoai);
-        manhom =(EditText) findViewById(R.id.them_MaNhom_LH) ;
+
 
     }
 
@@ -81,7 +81,7 @@ public class TrangThemLoaiHang extends AppCompatActivity {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(TrangThemLoaiHang.this);
                 builder.setTitle("Thông báo");
-                builder.setMessage("Bạn có chắc chắn muốn thêm sản phẩm ?");
+                builder.setMessage("Bạn có chắc chắn muốn thêm ?");
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -119,13 +119,12 @@ public class TrangThemLoaiHang extends AppCompatActivity {
                         JSONObject object = response.getJSONObject(i);
 
                         String maloait = object.getString("maloai");
-                        String manhomt = object.getString("manhomhang");
                         String tenloait = object.getString("tenloai");
 
 
 
                         // mangSP.add(new sanpham(masp,maloai,tenhang,hinhanh,baohanh,mancc, dongia,soluong));
-                        mangLH.add(new LoaiHang(maloait,manhomt,tenloait));
+                        mangLH.add(new LoaiHang(maloait,tenloait));
                         //Toast.makeText(TrangSanPham_list.this,"hello"+response,Toast.LENGTH_LONG).show();
                         Log.d("AAA",""+response);
                         customApdater.notifyDataSetChanged();
@@ -149,15 +148,12 @@ public class TrangThemLoaiHang extends AppCompatActivity {
         loading.setMessage("vui lòng đợi ...");
         loading.setCanceledOnTouchOutside(false);
         loading.show();
-        String url2 ="http://192.168.100.9:5000/api/LoaiHangs";
+        String url2 ="http://10.160.90.109:5000/api/LoaiHangs";
         JSONObject object = new JSONObject();
         try {
             String maspt = maloai.getText().toString();
-            // String maloait = object.getString("maloai");
             String tenhangt= tenlaoi.getText().toString();
-            //String hinhanht = object.getString("hinhanh");
-         //   String manhomt = manhom.getText().toString();
-            //String mancct = object.getString("mancc");
+
 
 
             object.put("maloai",maspt);

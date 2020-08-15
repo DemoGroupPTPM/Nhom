@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -27,7 +26,6 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.doanmonhoc.R;
-import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -59,6 +57,7 @@ public class ChiTiet_SP extends AppCompatActivity {
         actionBar.setTitle("Chi Tiết Sản Phẩm");
 
         hinhanh = (ImageView) findViewById(R.id.CTSP_img);
+
         masp = (TextView) findViewById(R.id.masp);
         maloai =(TextView) findViewById(R.id.loaihang);
         tenhang = (TextView) findViewById(R.id.CTSP_tensp);
@@ -66,38 +65,34 @@ public class ChiTiet_SP extends AppCompatActivity {
         soluong = (TextView) findViewById(R.id.CTSP_soluong);
         baohanh = (TextView) findViewById(R.id.CTSP_baohanh);
         mancc = (TextView) findViewById(R.id.CTSP_NCC);
-        btnXoa = findViewById(R.id.btnXoa_CTSP);
-        btnXoa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                deleteDialog(masp.getText().toString());
-               // finish();
-            }
-        });
 
 
-
+//        bundle.putString("Masp",masp);
+//        bundle.putString("Tensp",tensp);
+//        bundle.putString("Baohanh",baohanh);
+//        bundle.putString("Mancc",mancc);
+//        bundle.putString("Maloai",maloai);
+//        bundle.putString("dongia",dongia);
+//        bundle.putString("soluong",soluong);
+//
+//        in.putExtra("data",bundle);
 
         Bundle bundle = getIntent().getBundleExtra("data");
-        String masph = bundle.getString("masp");
-        String tensph = bundle.getString("tensp");
-        String hinh = bundle.getString("hinhanh");
-      //  String maloaisp = bundle.getString("maloai");
+        String masph = bundle.getString("Masp");
+        String tensph = bundle.getString("Tensp");
+        String baohanhsp = bundle.getString("Baohanh");
+        String manccsp = bundle.getString("Mancc");
+        String maloaisp = bundle.getString("Maloai");
         String dongiasp = bundle.getString("dongia");
         String soluongsp = bundle.getString("soluong");
-        String baohanhsp = bundle.getString("baohanh");
-       // String manccsp = bundle.getString("mancc");
-
-
 
         masp.setText(masph);
         tenhang.setText(tensph);
-     //   maloai.setText(maloaisp);
+        maloai.setText(maloaisp);
         dongia.setText(dongiasp);
         soluong.setText(soluongsp);
         baohanh.setText(baohanhsp);
-    //    mancc.setText(manccsp);
-        hinhanh.setImageURI(Uri.parse(hinh));
+        mancc.setText(manccsp);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -161,68 +156,6 @@ public class ChiTiet_SP extends AppCompatActivity {
             }
         });
         requestQueue.add(jsonArrayRequest);
-    }
-    public void deleteSP(final String ma)
-    {
-
-        String url ="http://192.168.1.108:5000/api/Sanphams/"+ma+"";
-
-        StringRequest deleteRequest = new StringRequest(Request.Method.DELETE, url,
-                new Response.Listener<String>()
-                {
-                    @Override
-                    public void onResponse(String response) {
-                        // response on Success
-                        Log.d("Response", response);
-                        getSanPham();
-                    }
-                },
-                new Response.ErrorListener()
-                {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        // error
-                        // Log.d("Error.Response", error.getMessage());
-                        Log.e("response_det", "" + error.getMessage() + "," + error.toString());
-                    }
-                }
-        );
-        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-        queue.add(deleteRequest);
-        //getStudentData();
-    }
-    public void deleteDialog(final String ma)
-    {
-        //Khởi tạo Đối tượng
-        androidx.appcompat.app.AlertDialog.Builder b = new androidx.appcompat.app.AlertDialog.Builder(ChiTiet_SP.this);
-        //Thiết Lập Title
-        b.setTitle("Xác Nhận");
-        b.setMessage("bạn có muon xoa " + ma + " này không?");
-        //Tạo nút Đồng ý
-        b.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int id) {
-                //xử lý sự kiện
-                deleteSP(ma);
-                Toast.makeText(ChiTiet_SP.this,"xóa thành công mã " + ma,Toast.LENGTH_LONG).show();
-
-            }
-        });
-        b.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // xử lý sự kiện
-                dialog.dismiss();
-            }
-        });
-
-
-
-        //Tạo dialog
-        androidx.appcompat.app.AlertDialog alertDialog= b.create();
-        //Hiển Thị
-        alertDialog.show();
-
     }
 
 

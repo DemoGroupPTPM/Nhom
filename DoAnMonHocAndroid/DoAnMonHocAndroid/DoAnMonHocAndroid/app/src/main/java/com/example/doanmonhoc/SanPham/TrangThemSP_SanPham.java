@@ -9,9 +9,7 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.LocusId;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,8 +19,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -36,7 +32,6 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.doanmonhoc.LoaiHang.LoaiHang;
 import com.example.doanmonhoc.LoaiHang.LoaiHang_Adapter;
-import com.example.doanmonhoc.LoaiHang.LoaiHang_List;
 import com.example.doanmonhoc.R;
 import com.example.doanmonhoc.TrangChuActivity;
 import com.example.doanmonhoc.TrangDangNhap;
@@ -50,17 +45,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TrangThemSP_SanPham extends AppCompatActivity {
-    String url ="http://192.168.100.9:5000/api/Sanphams";
-    String url1 ="http://192.168.100.9:5000/api/LoaiHangs";
-    EditText masp, tensp, giaban, soluong, baohanh ;
-    ListView lv ;
+    String url ="http://10.160.90.109:5000/api/Sanphams";
+    EditText masp, tensp, giaban, soluong, baohanh;
+    ListView lv,listView ;
     Button btnluu;
     ArrayList<sanpham> mangSP= new  ArrayList<>();
+    ArrayList<LoaiHang> mangLH = new  ArrayList<>();
+
     SanPham_Adapter customApdater;
-
-    Spinner spinnerLoai;
-
-
+    LoaiHang_Adapter loaiHang_adapter ;
+    private AppCompatSpinner spLoaihang;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,36 +74,54 @@ public class TrangThemSP_SanPham extends AppCompatActivity {
         giaban =(EditText) findViewById(R.id.edit_them_gia) ;
         soluong = (EditText) findViewById( R.id.edit_them_soluong);
         baohanh = (EditText) findViewById(R.id.edit_them_baohanh) ;
+        lv = findViewById(R.id.List_sanpham);
+        spLoaihang= findViewById(R.id.spLoaiHang);
+        ArrayAdapter  a = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item,mangSP);
+        spLoaihang.setAdapter(a);
+//        loaiHang_adapter = new LoaiHang_Adapter(TrangThemSP_SanPham.this,mangLH,R.layout.custom_loaihang);
+//        spLoaihang.setAdapter(loaiHang_adapter);
+//        MySpinnerSP_Adapter mySpinnerSP_adapter = new MySpinnerSP_Adapter(TrangThemSP_SanPham.this,loaiHangArrayList);
+//        spLoaihang.setAdapter(mySpinnerSP_adapter);
+//        spLoaihang.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//        @Override
+//        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+//            LoaiHang loaiHang = loaiHangArrayList.get(i);
+//            Toast.makeText(TrangThemSP_SanPham.this,loaiHang.getMaloai(),Toast.LENGTH_LONG).show();
+//        }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> adapterView) {
+//
+//            }
+//        });
 
-        spinnerLoai= findViewById(R.id.spLoaiHang);
-        ArrayList<LoaiHang> hihi = new ArrayList<>();
-        hihi.add(new LoaiHang("Loai0001"));
-        hihi.add(new LoaiHang("Loai0002"));
-        hihi.add(new LoaiHang("Loai0003"));
-        hihi.add(new LoaiHang("Loai0004"));
-        hihi.add(new LoaiHang("Loai0005"));
-        hihi.add(new LoaiHang("Loai0006"));
+       // btnluu = (Button) findViewById( R.id.btnThemSP);
+//        btnluu.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                AlertDialog.Builder builder = new AlertDialog.Builder(TrangThemSP_SanPham.this);
+//                builder.setTitle("Thông báo");
+//                builder.setMessage("Bạn có chắc chắn muốn thêm sản phẩm ?");
+//                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                       // insertSP();
+//                        insertSP();
+//                        //chuyển về list sp để xem sp
+//                        Intent intent = new Intent(TrangThemSP_SanPham.this, TrangSanPham_list.class);
+//                        startActivity(intent);
+//                    }
+//                });
+//                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        finish();
+//                    }
+//                });
+//                builder.show();
+//            }
+//        });
 
-        adapter customApdater1 = new adapter(TrangThemSP_SanPham.this, R.layout.dropdown_loaihang, hihi);
-        spinnerLoai.setAdapter(customApdater1);
-
-
-        //MySpinnerSP_Adapter mySpinnerSP_adapter = new MySpinnerSP_Adapter(TrangThemSP_SanPham.this,a);
-        //spLoaihang.setAdapter(mySpinnerSP_adapter);
-        spinnerLoai.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-        @Override
-        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-            //LoaiHang loaiHang = hihi.get(i);
-//            LoaiHang lhang = new LoaiHang();
-//            lhang.maloai = a.get(i).getMaloai();
-            //Toast.makeText(TrangThemSP_SanPham.this,loaiHang.getMaloai(),Toast.LENGTH_LONG).show();
-        }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
     }
 //tạo nút lưu trên actionbar
     @Override
@@ -158,7 +170,6 @@ public class TrangThemSP_SanPham extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
     public void getSanPham()
     {
         RequestQueue requestQueue = Volley.newRequestQueue(TrangThemSP_SanPham.this);
@@ -198,14 +209,13 @@ public class TrangThemSP_SanPham extends AppCompatActivity {
         requestQueue.add(jsonArrayRequest);
     }
 
-
     public void insertSP() {
         ArrayList<LoaiHang> loaiHangArrayList = new ArrayList<>();
         final ProgressDialog loading = new ProgressDialog(TrangThemSP_SanPham.this);
         loading.setMessage("vui lòng đợi ...");
         loading.setCanceledOnTouchOutside(false);
         loading.show();
-        String url2 ="http://192.168.100.9:5000/api/Sanphams";
+        String url2 ="http://10.160.90.109:5000/api/Sanphams";
         JSONObject object = new JSONObject();
         try {
             String maspt = masp.getText().toString();
@@ -264,6 +274,4 @@ public class TrangThemSP_SanPham extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
         requestQueue.add(jsonObjectRequest);
     }
-
-
 }

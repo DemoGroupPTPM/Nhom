@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
     <ScrollView
         android:paddingTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
 
+        <!--        MANCC nvarchar(50) PRIMARY KEY,-->
+        <!--        TENNCC NVARCHAR(100) ,-->
+        <!--        DIACHI NVARCHAR(100),-->
+        <!--        DIENTHOAI char(10),-->
+        <!--        CHUTHICH NVARCHAR(100),-->
+
         <LinearLayout
-            android:id="@+id/layout_themKH"
+            android:id="@+id/layout_suaNCC"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -19,42 +24,39 @@
                 android:layout_marginLeft="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/layout_maKH">
+                android:id="@+id/layout_sua_maNCC">
 
                 <TextView
-                    android:id="@+id/lblMaLoai"
+                    android:id="@+id/them_sua_maNCC"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
                     android:gravity="center_vertical"
-                    android:text="Mã loại"
+                    android:text="Mã Loại Hàng"
                     android:textColor="#000000"
                     android:textStyle="bold" />
-
                 <EditText
-                    android:id="@+id/them_MaLoai"
                     android:layout_width="400dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="50dp"
                     android:layout_marginLeft="50dp"
-                    android:layout_toEndOf="@+id/lblMaLoai"
-                    android:layout_toRightOf="@+id/them_maKH"
-                    android:hint="Nhập mã loại"
-                    android:textColorHint="#CFD8D7" />
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/them_sua_maNCC"
+                    android:id="@+id/edit_sua_MaLH"
+                    android:hint="Nhập mã ncc"
+                    android:textColorHint="#CFD8D7"
+                    />
 
 
             </RelativeLayout>
-
             <RelativeLayout
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/layout_diachiKH">
+                android:id="@+id/layout_sua_tenNCC">
                 <TextView
-                    android:id="@+id/them_diachiKH"
+                    android:id="@+id/sua_tenNCC"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
-                    android:text="Tên Loại "
+                    android:text="Tên Loại Hàng"
                     android:gravity="center_vertical"
                     android:textColor="#000000"
                     android:textStyle="bold"
@@ -63,9 +65,9 @@
                     android:layout_width="400dp"
                     android:layout_marginLeft="50dp"
                     android:layout_height="50dp"
-                    android:layout_toRightOf="@+id/them_diachiKH"
-                    android:id="@+id/them_TenLoai"
-                    android:hint="Nhập "
+                    android:layout_toRightOf="@+id/sua_tenNCC"
+                    android:id="@+id/edit_sua_tenLH"
+                    android:hint="Nhập tên "
                     android:textColorHint="#CFD8D7"
                     />
 
@@ -73,6 +75,7 @@
             </RelativeLayout>
 
         </LinearLayout>
-    </ScrollView>
 
-</LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

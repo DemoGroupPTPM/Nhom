@@ -5,7 +5,6 @@ import java.util.Date;
 
 public class HoaDon implements Serializable {
     String mahd,masp,makh;
-    String ngaylap;
     Double dongia;
     int soluong;
     String donvitinh;
@@ -13,11 +12,10 @@ public class HoaDon implements Serializable {
     public HoaDon() {
     }
 
-    public HoaDon(String mahd, String masp, String makh, String ngaylap, Double dongia, int soluong, String donvitinh, Double thanhtien) {
+    public HoaDon(String mahd, String masp, String makh, Double dongia, int soluong, String donvitinh, Double thanhtien) {
         this.mahd = mahd;
         this.masp = masp;
         this.makh = makh;
-        this.ngaylap = ngaylap;
         this.dongia = dongia;
         this.soluong = soluong;
         this.donvitinh = donvitinh;
@@ -46,14 +44,6 @@ public class HoaDon implements Serializable {
 
     public void setMakh(String makh) {
         this.makh = makh;
-    }
-
-    public String getNgaylap() {
-        return ngaylap;
-    }
-
-    public void setNgaylap(String ngaylap) {
-        this.ngaylap = ngaylap;
     }
 
     public Double getDongia() {

@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".HoaDon.ChiTietHoaDon"></activity>
+        <activity android:name=".HoaDon.TrangSuaHD"></activity>
+        <activity android:name=".HoaDon.TrangThemHD"></activity>
+        <activity android:name=".LoaiHang.TrangSuaLoaiHang"></activity>
         <activity android:name=".LoaiHang.TrangThemLoaiHang"></activity>
         <activity android:name=".LoaiHang.LoaiHang_List"></activity>
         <activity android:name=".KhachHnag.TrangSuaKhachHang"></activity>

@@ -38,11 +38,7 @@
                     android:title="Khách hàng"
                     android:icon="@drawable/ic_baseline_group_24"
                     />
-                <item
-                    android:id="@+id/nhanvien"
-                    android:title="Nhân Viên"
-                    android:icon="@drawable/ic_baseline_group_24"
-                    />
+
             </group>
         </menu>
 

@@ -3,16 +3,13 @@ package com.example.doanmonhoc.LoaiHang;
 import java.io.Serializable;
 
 public class LoaiHang implements Serializable {
-        public String maloai,manhom,tenloai;
+        String maloai,tenloai;
 
     public LoaiHang() {
     }
-    public LoaiHang(String maloai) {
+
+    public LoaiHang(String maloai, String tenloai) {
         this.maloai = maloai;
-    }
-    public LoaiHang(String maloai, String manhom, String tenloai) {
-        this.maloai = maloai;
-        this.manhom = manhom;
         this.tenloai = tenloai;
     }
 
@@ -22,14 +19,6 @@ public class LoaiHang implements Serializable {
 
     public void setMaloai(String maloai) {
         this.maloai = maloai;
-    }
-
-    public String getManhom() {
-        return manhom;
-    }
-
-    public void setManhom(String manhom) {
-        this.manhom = manhom;
     }
 
     public String getTenloai() {

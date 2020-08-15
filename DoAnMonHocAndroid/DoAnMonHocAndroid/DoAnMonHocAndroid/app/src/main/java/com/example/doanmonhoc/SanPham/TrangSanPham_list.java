@@ -51,7 +51,7 @@ public class TrangSanPham_list extends AppCompatActivity {
     TextView tensp, masanpham,baohanh;
     SearchView searchView;
     private AppCompatSpinner spLoaihang;
-    String url ="http://192.168.100.9:5000/api/Sanphams";
+    String url ="http://10.160.90.109:5000/api/Sanphams";
     ListView lv;
     ArrayList<sanpham> mangSP;
     SanPham_Adapter customApdater;
@@ -80,14 +80,6 @@ public class TrangSanPham_list extends AppCompatActivity {
         ActionBar actionBar= getSupportActionBar();
         actionBar.setTitle("Sản Phẩm");
 
-       lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-           @Override
-           public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-               Intent intent = new Intent(getApplicationContext(),ChiTiet_SP.class);
-               intent.putExtra("sanpham",mangSP.get(i));
-               startActivity(intent);
-           }
-       });
 
     }
 
@@ -231,7 +223,7 @@ public class TrangSanPham_list extends AppCompatActivity {
     public void deleteSP(final String ma)
     {
 
-        String url ="http://192.168.100.9:5000/api/Sanphams/"+ma+"";
+        String url ="http://10.160.90.109:5000/api/Sanphams/"+ma+"";
 
         StringRequest deleteRequest = new StringRequest(Request.Method.DELETE, url,
                 new Response.Listener<String>()

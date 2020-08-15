@@ -42,7 +42,7 @@ public class KhachHang_List extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager viewPagerHome;
     TextView  makh,tenkh,diachi,dienthoai,email;
-    String url ="http://192.168.100.9:5000/api/KhachHangs";
+    String url ="http://10.160.90.109:5000/api/KhachHangs";
     ListView lv;
     ArrayList<KhachHang> mangKH;
     KhachHang_Adapter customApdater;
@@ -162,7 +162,7 @@ public class KhachHang_List extends AppCompatActivity {
     public void deleteSP(final String ma)
     {
 
-        String url ="http://192.168.100.9:5000/api/KhachHangs/"+ma+"";
+        String url ="http://10.160.90.109:5000/api/KhachHangs/"+ma+"";
 
         StringRequest deleteRequest = new StringRequest(Request.Method.DELETE, url,
                 new Response.Listener<String>()

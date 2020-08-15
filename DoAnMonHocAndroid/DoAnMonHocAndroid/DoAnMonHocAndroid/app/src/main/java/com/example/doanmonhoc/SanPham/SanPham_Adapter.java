@@ -14,7 +14,6 @@ import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -29,12 +28,12 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.doanmonhoc.R;
+import com.squareup.picasso.Picasso;
 
 import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
-import com.squareup.picasso.Picasso;
 
 public class SanPham_Adapter extends ArrayAdapter {
 
@@ -44,8 +43,6 @@ public class SanPham_Adapter extends ArrayAdapter {
     ArrayList<sanpham> arrayList;
     TextView tensp, masp, baohanh, dongia;
     int layout;
-    ImageView hinhanh;
-    //ImageView hinhanhchitiet;
 
     public SanPham_Adapter(TrangSanPham_list context, ArrayList<sanpham> arrayList, int layout) {
         super(context,layout,arrayList);
@@ -77,7 +74,7 @@ public  void  update(ArrayList<sanpham> hi)
 
     public class ViewHolder {
         TextView tensp, masp, baohanh, dongia,soluong,mancc,maloai;
-        Button btnXoa;
+        ImageView btnXoa;
         ImageView imgHinh;
     }
 
@@ -94,7 +91,11 @@ public  void  update(ArrayList<sanpham> hi)
             holder.baohanh = convertView.findViewById(R.id.txtBH);
             holder.dongia = convertView.findViewById(R.id.txtdonGia);
             holder.soluong = convertView.findViewById(R.id.txtSL);
+            holder.btnXoa = convertView.findViewById(R.id.btnXoaSP);
+            holder.mancc = convertView.findViewById(R.id.txtMaLoai);
             holder.imgHinh = convertView.findViewById(R.id.imgHinhanhSP);
+
+
 //            holder.btnXoa = convertView.findViewById(R.id.btnXoa);
             convertView.setTag(holder);
         } else {
@@ -108,8 +109,15 @@ public  void  update(ArrayList<sanpham> hi)
         holder.dongia.setText(String.valueOf(sanp.getDongia()));
         holder.soluong.setText( String.valueOf( sanp.getSoluong()));
         Picasso.with(getContext()).load(sanp.getHinhanh()).into(holder.imgHinh);
+//        holder.mancc.setText(sanp.getMaloai());
+     //   holder.maloai.setText(sanp.getMaloai());
+        holder.btnXoa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                deleteDialog(sanp.getMasp());
+            }
+        });
 
-        hinhanh = (ImageView) convertView.findViewById(R.id.CTSP_img);
 
 
         convertView.setOnClickListener(new View.OnClickListener() {
@@ -119,24 +127,22 @@ public  void  update(ArrayList<sanpham> hi)
                 String tensp= holder.tensp.getText().toString();
                 String baohanh = holder.baohanh.getText().toString();
                 //String mancc = holder.mancc.getText().toString();
-               // String maloai = holder.maloai.getText().toString();
+             //  String mancc = holder.maloai.getText().toString();
                 String dongia = String.valueOf(holder.dongia.getText().toString());
                 String soluong = String.valueOf(holder.soluong.getText().toString());
-                String hinhanhchitiet= holder.imgHinh.getTag().toString();
-                Picasso.with(getContext()).load(String.valueOf( hinhanhchitiet)).into(hinhanh);
-
 
                 Intent in=new Intent(view.getContext(),ChiTiet_SP.class);
                 Bundle bundle= new Bundle();
-                bundle.putString("masp",masp);
-                bundle.putString("tensp",tensp);
-                bundle.putString("hinhanh",String.valueOf(hinhanhchitiet));
-
+                bundle.putString("Masp",masp);
+                bundle.putString("Tensp",tensp);
+                bundle.putString("Baohanh",baohanh);
                 //bundle.putString("Mancc",mancc);
-               // bundle.putString("Maloai",maloai);
+             //   bundle.putString("Maloai",mancc);
                 bundle.putString("dongia",dongia);
                 bundle.putString("soluong",soluong);
-                bundle.putString("baohanh",baohanh);
+                //String hinhanhchitiet= holder.imgHinh.getTag().toString();
+               // Picasso.with(getContext()).load(String.valueOf( hinhanhchitiet)).into(holder.imgHinh);
+
                 in.putExtra("data",bundle);
                 context.startActivity(in);
             }
@@ -169,9 +175,7 @@ public  void  update(ArrayList<sanpham> hi)
                 dialog.dismiss();
             }
         });
-
-
-
+        
         //Tạo dialog
         androidx.appcompat.app.AlertDialog alertDialog= b.create();
         //Hiển Thị

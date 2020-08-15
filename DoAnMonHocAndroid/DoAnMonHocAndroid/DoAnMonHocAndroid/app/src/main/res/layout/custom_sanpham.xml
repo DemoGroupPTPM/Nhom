@@ -15,97 +15,110 @@
         android:layout_height="120dp"/>
 
     <LinearLayout
-        android:layout_width="261dp"
+        android:layout_width="232dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/txtMaSP"
-            android:textColor="#0B0A0B"
-            android:textStyle="bold"
-            android:textSize="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="Mã SP" />
+            android:text="Mã SP"
+            android:textColor="#0B0A0B"
+            android:textSize="15dp"
+            android:textStyle="bold" />
 
         <TextView
-            android:textColor="#0B0A0B"
-            android:textStyle="bold"
-            android:textSize="15dp"
             android:id="@+id/txtTenSP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="tên sản phẩm" />
+            android:text="tên sản phẩm"
+            android:textColor="#0B0A0B"
+            android:textSize="15dp"
+            android:textStyle="bold" />
 
         <LinearLayout
-            android:layout_marginTop="5dp"
             android:id="@+id/layout_BH"
-            android:layout_below="@+id/layout_ten"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_ten"
+            android:layout_marginTop="5dp"
             android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bảo Hành:"
-                />
+                android:text="Bảo Hành:" />
+
             <TextView
                 android:id="@+id/txtBH"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bảo hành"
-                />
+                android:text="Bảo hành" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="5dp"
             android:id="@+id/layout_gia"
-            android:layout_below="@+id/layout_BH"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            android:layout_below="@+id/layout_BH"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Gía:"
-                />
+                android:text="Gía:" />
+
             <TextView
                 android:id="@+id/txtdonGia"
-                android:layout_marginRight="50dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Đơn Gía"
-                />
+                android:layout_marginRight="50dp"
+                android:text="Đơn Gía" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="5dp"
             android:id="@+id/layout_sl"
-            android:layout_below="@+id/layout_gia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            android:layout_below="@+id/layout_gia"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Số Lượng :  "
-                />
+                android:text="Số Lượng :  " />
+
             <TextView
                 android:id="@+id/txtSL"
-                android:layout_marginRight="50dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Số Lượng"
-                />
+                android:layout_marginRight="50dp"
+                android:text="Số Lượng" />
         </LinearLayout>
 
 
+
+    </LinearLayout>
+    <LinearLayout
+        android:paddingTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+
+            android:id="@+id/btnXoaSP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_baseline_delete_forever_24" />
     </LinearLayout>
 
 
@@ -114,6 +127,7 @@
 
 
     </LinearLayout>
+
 </LinearLayout>
 
 

@@ -1,7 +1,9 @@
 package com.example.doanmonhoc.LoaiHang;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,9 +24,11 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.doanmonhoc.KhachHnag.TrangSuaKhachHang;
 import com.example.doanmonhoc.R;
 import com.example.doanmonhoc.SanPham.SanPham_Adapter;
 import com.example.doanmonhoc.SanPham.TrangSanPham_list;
+import com.example.doanmonhoc.SanPham.TrangThemSP_SanPham;
 import com.example.doanmonhoc.SanPham.sanpham;
 
 import org.json.JSONArray;
@@ -48,6 +52,8 @@ LoaiHang_List context;
         this.layout=resource;
     }
 
+
+
     @Override
     public int getCount() {
         return arrayList.size();
@@ -61,6 +67,12 @@ LoaiHang_List context;
     @Override
     public long getItemId(int i) {
         return 0;
+    }
+
+    public void update(ArrayList<LoaiHang> kh) {
+        arrayList= new ArrayList<>();
+        arrayList.addAll(kh);
+        notifyDataSetChanged();
     }
 
     public class ViewHolder {
@@ -80,7 +92,7 @@ LoaiHang_List context;
 
             holder.maloai = convertView.findViewById(R.id.txtMaLoai);
             holder.tenloai = convertView.findViewById(R.id.txtTenLoai);
-         //   holder.manhom = convertView.findViewById(R.id.txtMaNhom_LH);
+
 
             holder.btnSua = convertView.findViewById(R.id.btnSuaLoaiHang);
             holder.btnXoa = convertView.findViewById(R.id.btnXoaLoaiHang);
@@ -93,7 +105,7 @@ LoaiHang_List context;
         final LoaiHang sanp = arrayList.get(position);
         holder.maloai.setText(sanp.getMaloai());
         holder.tenloai.setText(sanp.getTenloai());
-       // holder.manhom.setText(sanp.getManhom());
+
         holder.btnXoa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -103,7 +115,9 @@ LoaiHang_List context;
         holder.btnSua.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent i = new Intent(context, TrangSuaLoaiHang.class);
+                i.putExtra("loaihang", arrayList.get(position));
+                ((Activity)context).startActivity(i);
             }
         });
 

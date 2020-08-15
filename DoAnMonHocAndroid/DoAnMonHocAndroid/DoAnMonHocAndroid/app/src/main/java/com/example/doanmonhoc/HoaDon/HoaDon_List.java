@@ -47,7 +47,7 @@ public class HoaDon_List extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager viewPagerHome;
     TextView mahd,makh,masp,ngaylap,thanhtien;
-    String url ="http://192.168.1.108:5000/api/ChiTietHoaDons";
+    String url ="http://10.160.90.109:5000/api/ChiTietHoaDons";
     ListView lv;
     ArrayList<HoaDon> mangHD;
     HoaDon_Adapter customApdater;
@@ -146,14 +146,13 @@ public class HoaDon_List extends AppCompatActivity {
                         String mahdd = object.getString("mahd");
                         String maspp = object.getString("masp");
                         String makhh = object.getString("makhachhang");
-                        String ngay = object.getString("ngaylapphieu");
                         double dongia = object.getDouble("dongia");
                         int soluong = object.getInt("soluong");
                         String dvt = object.getString("donvitinh");
                         double tt = object.getDouble("thanhtien");
 
 
-                         mangHD.add(new HoaDon(mahdd,maspp,makhh,ngay,dongia,soluong,dvt, tt));
+                         mangHD.add(new HoaDon(mahdd,maspp,makhh,dongia,soluong,dvt, tt));
                     //    mangSP.add(new sanpham(masp,maloai,tenhang,hinhanh,baohanh,mancc,dongia,soluong));
                         //Toast.makeText(TrangSanPham_list.this,"hello"+response,Toast.LENGTH_LONG).show();
                         Log.d("AAA",""+response);
@@ -176,7 +175,7 @@ public class HoaDon_List extends AppCompatActivity {
     public void deleteHD(final String ma)
     {
 
-        String url ="http://192.168.1.108:5000/api/ChiTietHoaDons/"+ma+"";
+        String url ="http://10.160.90.109:5000/api/ChiTietHoaDons/"+ma+"";
 
         StringRequest deleteRequest = new StringRequest(Request.Method.DELETE, url,
                 new Response.Listener<String>()

@@ -44,7 +44,7 @@ import java.util.ArrayList;
 public class TrangSuaNhaCungCap extends AppCompatActivity {
 
     EditText mancc,tenncc,diachi,sdt,chuthich;
-    String url ="http://192.168.1.108:5000/api/NhaCungCaps";
+    String url ="http://10.160.90.109:5000/api/NhaCungCaps";
     Button btnluu;
     ArrayList<NhaCungCap> mangncc;
     NhaCungCap_Adapter customApdater;

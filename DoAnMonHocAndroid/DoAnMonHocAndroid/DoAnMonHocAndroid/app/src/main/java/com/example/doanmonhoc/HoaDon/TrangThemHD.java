@@ -46,8 +46,8 @@ public class TrangThemHD extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager viewPagerHome;
     TextView mahd,donvitinh,dongia,thanhtien,soluong,ngaylap;
-    Spinner masp,makh;
-    String url ="http://192.168.1.108:5000/api/HoaDons";
+    TextView masp,makh;
+    String url ="http://10.160.90.109:5000/api/ChiTietHoaDons";
     ListView lv;
     ArrayList<HoaDon> mangHD;
     HoaDon_Adapter customApdater;
@@ -68,13 +68,13 @@ public class TrangThemHD extends AppCompatActivity {
 //        soluong = (EditText) findViewById( R.id.edit_them_soluong);
 //        baohanh = (EditText) findViewById(R.id.edit_them_baohanh) ;
         mahd = findViewById(R.id.them_mahd);
-       // masp = findViewById(R.id.them_spMaSP_HD);
-       // makh = findViewById(R.id.them_spKH_HD);
-        ngaylap = findViewById(R.id.txtNgayLap_HD);
+        masp = findViewById(R.id.them_spMaSP_HD);
+        makh = findViewById(R.id.them_spKH_HD);
        dongia = findViewById(R.id.them_dongia_HD);
        soluong = findViewById(R.id.them_sl_HD);
        donvitinh = findViewById(R.id.themDVTHD);
        thanhtien = findViewById(R.id.themThanhTien_HD);
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -101,7 +101,7 @@ public class TrangThemHD extends AppCompatActivity {
                         // insertSP();
                         insertKH();
                         //chuyển về list sp để xem sp
-                        Intent intent = new Intent(TrangThemHD.this, KhachHang_List.class);
+                        Intent intent = new Intent(TrangThemHD.this, HoaDon_List.class);
                         startActivity(intent);
                     }
                 });
@@ -133,14 +133,13 @@ public class TrangThemHD extends AppCompatActivity {
                         String mahdd = object.getString("mahd");
                         String maspp = object.getString("masp");
                         String makhh = object.getString("makhachhang");
-                        String ngay = object.getString("ngaylapphieu");
                         double dongia = object.getDouble("dongia");
                         int soluong = object.getInt("soluong");
                         String dvt = object.getString("donvitinh");
                         double tt = object.getDouble("thanhtien");
 
 
-                        mangHD.add(new HoaDon(mahdd,maspp,makhh,ngay,dongia,soluong,dvt, tt));
+                        mangHD.add(new HoaDon(mahdd,maspp,makhh,dongia,soluong,dvt,tt));
                         //    mangSP.add(new sanpham(masp,maloai,tenhang,hinhanh,baohanh,mancc,dongia,soluong));
                         //Toast.makeText(TrangSanPham_list.this,"hello"+response,Toast.LENGTH_LONG).show();
                         Log.d("AAA",""+response);
@@ -165,17 +164,13 @@ public class TrangThemHD extends AppCompatActivity {
         loading.setMessage("vui lòng đợi ...");
         loading.setCanceledOnTouchOutside(false);
         loading.show();
-        String url2 ="http://192.168.1.108:5000/api/ChiTietHoaDons";
+        String url2 ="http://10.160.90.109:5000/api/ChiTietHoaDons";
         JSONObject object = new JSONObject();
         try {
             String mahdd= mahd.getText().toString();
-            String maspp= masp.getSelectedItem().toString();
-            String makhh = makh.getSelectedItem().toString();
-            // String maloait = object.getString("maloai");
-            String ngayla = ngaylap.getText().toString();
-            //String hinhanht = object.getString("hinhanh");
+            String maspp= masp.getText().toString();
+            String makhh = makh.getText().toString();
             String dong = dongia.getText().toString();
-            //String mancct = object.getString("mancc");
             String sl =  soluong.getText().toString();
             String dvt = donvitinh.getText().toString();
             String tt = thanhtien.getText().toString();
@@ -183,7 +178,6 @@ public class TrangThemHD extends AppCompatActivity {
             object.put("mahd",mahdd);
             object.put("masp",maspp);
             object.put("makhachhang",makhh);
-            object.put("ngaylap",ngayla);
             object.put("dongia",dong);
             object.put("soluong",sl);
             object.put("donvitinh",dvt);

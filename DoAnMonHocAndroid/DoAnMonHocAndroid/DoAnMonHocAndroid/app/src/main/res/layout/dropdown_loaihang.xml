@@ -5,9 +5,7 @@
     android:orientation="vertical">
 <TextView
     android:padding="8dp"
-    android:hint="Day la mã loại"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:id="@+id/tvLoaiHang"
-    android:textSize="20dp"></TextView>
+    android:id="@+id/tvLoaiHang"></TextView>
 </LinearLayout>

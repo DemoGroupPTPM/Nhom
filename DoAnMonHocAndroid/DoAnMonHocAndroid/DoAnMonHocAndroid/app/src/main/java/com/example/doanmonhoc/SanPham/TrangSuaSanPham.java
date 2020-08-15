@@ -39,7 +39,7 @@ public class TrangSuaSanPham extends AppCompatActivity {
     ArrayList<sanpham> mangSP;
     EditText masp, tensp, giaban, soluong, baohanh;
     Spinner txtmaloai,txtncc;
-    String url2="http://192.168.1.108:5000/api/Sanphams/" ;
+    String url2="http://10.160.90.109:5000/api/Sanphams/" ;
 //   String ma;
     SanPham_Adapter customApdater;
     @Override
@@ -60,6 +60,7 @@ public class TrangSuaSanPham extends AppCompatActivity {
         baohanh = (EditText) findViewById(R.id.edit_them_baohanh) ;
         txtmaloai = findViewById(R.id.spLoaiHang);
         txtncc= findViewById(R.id.spNhaCC);
+
 
     }
     //tạo nút lưu
@@ -107,7 +108,7 @@ public class TrangSuaSanPham extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     public void getSanPham()
-    {    String url ="http://192.168.1.108:5000/api/SanPhams";
+    {    String url ="http://10.160.90.109:5000/api/SanPhams";
         RequestQueue requestQueue = Volley.newRequestQueue(TrangSuaSanPham.this);
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override
@@ -146,6 +147,7 @@ public class TrangSuaSanPham extends AppCompatActivity {
         requestQueue.add(jsonArrayRequest);
     }
 
+//    }
     private void confirmEdit( final int id)
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(TrangSuaSanPham.this);
@@ -167,7 +169,7 @@ public class TrangSuaSanPham extends AppCompatActivity {
     }
     public  void editStudent(final int id)
     {
-        String url2="http://192.168.1.108:5000/api/Sanphams/"+id+"";
+        String url2="http://10.160.90.109:5000/api/Sanphams/"+id+"";
         RequestQueue requestQueue = Volley.newRequestQueue(TrangSuaSanPham.this);
         StringRequest insertRequest = new StringRequest(Request.Method.PUT, url2, new Response.Listener<String>() {
             @Override

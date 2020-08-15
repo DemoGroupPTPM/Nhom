@@ -116,6 +116,14 @@ public class TrangChuActivity extends AppCompatActivity implements NavigationVie
                 intent= new Intent(this, KhachHang_List.class);
                 startActivity(intent);
                 break;
+            case R.id.ncc:
+                intent= new Intent(this, NhaCungCap_List.class);
+                startActivity(intent);
+                break;
+            case R.id.dathang:
+                intent= new Intent(this, HoaDon_List.class);
+                startActivity(intent);
+                break;
             case R.id.dangxuat:
                 AlertDialog.Builder builder = new AlertDialog.Builder(TrangChuActivity.this);
                 builder.setTitle("Thông báo");
@@ -176,7 +184,7 @@ public class TrangChuActivity extends AppCompatActivity implements NavigationVie
                 break;
             }
             case R.id.thongbao_card : {
-                i = new Intent(this, TrangThongBao.class);
+                i = new Intent(this, KhachHang_List.class);
                 startActivity(i);
                 break;
             }

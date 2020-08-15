@@ -12537,11 +12537,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\QLCHDT_API\\QLCHDT_API\\QLCHDT_API.csproj",
+      "projectUniqueName": "D:\\DoAnMonHocAndroid\\QLCHDT_API\\QLCHDT_API\\QLCHDT_API.csproj",
       "projectName": "QLCHDT_API",
-      "projectPath": "D:\\QLCHDT_API\\QLCHDT_API\\QLCHDT_API.csproj",
+      "projectPath": "D:\\DoAnMonHocAndroid\\QLCHDT_API\\QLCHDT_API\\QLCHDT_API.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\QLCHDT_API\\QLCHDT_API\\obj\\",
+      "outputPath": "D:\\DoAnMonHocAndroid\\QLCHDT_API\\QLCHDT_API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",

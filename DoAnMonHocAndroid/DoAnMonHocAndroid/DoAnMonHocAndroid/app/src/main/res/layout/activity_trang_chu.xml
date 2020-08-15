@@ -230,7 +230,7 @@
                             android:paddingTop="10dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="BẢO HÀNH"
+                            android:text="KHÁCH HÀNH"
                             android:textAlignment="center"
                             android:textStyle="bold" />
                     </LinearLayout>

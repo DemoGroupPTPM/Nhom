@@ -46,7 +46,7 @@ namespace DoAnMonPTPM
         }
         private void frm_LoaiHang_Load(object sender, EventArgs e)
         {
-            txtTenLoaiHang.Focus();
+            cboMaNhomHang.Focus();
             LoadMaNhomHang();
             loadMaLoaiTuTao();
             loadDataLoaiHang();
@@ -94,7 +94,7 @@ namespace DoAnMonPTPM
                             loaihang_bll.ThemLoaiHang(maloai, manhomhang, tenloai);
                             MessageBox.Show("Thêm Thành Công loại hàng " + maloai, "Thông báo");
                             loadDataLoaiHang();
-                            clearText();
+                            lammoi();
                             cboMaNhomHang.Focus();
 
                         }
@@ -162,7 +162,7 @@ namespace DoAnMonPTPM
                     loaihang_bll.SuaLoaiHang(maloai, manhomhang, tenloai);
                     loadDataLoaiHang();
                     MessageBox.Show("Sửa Thành Công loại hàng " + maloai, "Thông Báo");
-
+                    lammoi();
                     txtTenLoaiHang.Focus();
                 }
                 clearText();
@@ -176,7 +176,9 @@ namespace DoAnMonPTPM
         {
             loadMaLoaiTuTao();
             txtTenLoaiHang.EditValue = "";
-            cboMaNhomHang.SelectedIndex = -1;
+            cboMaNhomHang.DataSource = null;
+            LoadMaNhomHang();
+            cboMaNhomHang.Focus();
         }
         private void btnLamMoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -194,9 +196,17 @@ namespace DoAnMonPTPM
 
         private void gvLoaiHang_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            txtMaLoai.Text = gvLoaiHang.GetRowCellValue(gvLoaiHang.FocusedRowHandle, "MALOAI").ToString();
-            cboMaNhomHang.SelectedValue = gvLoaiHang.GetRowCellValue(gvLoaiHang.FocusedRowHandle, "MANHOMHANG").ToString();
-            txtTenLoaiHang.Text = gvLoaiHang.GetRowCellValue(gvLoaiHang.FocusedRowHandle, "TENLOAI").ToString();
+           
+        }
+
+        private void gvLoaiHang_FocusedRowChanged_1(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            if (gvLoaiHang.RowCount != 0)
+            {
+                txtMaLoai.Text = gvLoaiHang.GetRowCellValue(gvLoaiHang.FocusedRowHandle, "MALOAI").ToString();
+                cboMaNhomHang.SelectedValue = gvLoaiHang.GetRowCellValue(gvLoaiHang.FocusedRowHandle, "MANHOMHANG").ToString();
+                txtTenLoaiHang.Text = gvLoaiHang.GetRowCellValue(gvLoaiHang.FocusedRowHandle, "TENLOAI").ToString();
+            }
         }
     }
 }

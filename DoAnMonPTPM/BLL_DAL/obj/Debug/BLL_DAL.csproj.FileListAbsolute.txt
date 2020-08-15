@@ -11,3 +11,10 @@ D:\TaiXuong\DoAnMonPTPM\BLL_DAL\bin\Debug\BLL_DAL.pdb
 D:\TaiXuong\DoAnMonPTPM\BLL_DAL\obj\Debug\BLL_DAL.csproj.CoreCompileInputs.cache
 D:\TaiXuong\DoAnMonPTPM\BLL_DAL\obj\Debug\BLL_DAL.dll
 D:\TaiXuong\DoAnMonPTPM\BLL_DAL\obj\Debug\BLL_DAL.pdb
+D:\DoAnMonHocPTPM\Nhom\DoAnMonPTPM\BLL_DAL\bin\Debug\BLL_DAL.dll.config
+D:\DoAnMonHocPTPM\Nhom\DoAnMonPTPM\BLL_DAL\bin\Debug\BLL_DAL.dll
+D:\DoAnMonHocPTPM\Nhom\DoAnMonPTPM\BLL_DAL\bin\Debug\BLL_DAL.pdb
+D:\DoAnMonHocPTPM\Nhom\DoAnMonPTPM\BLL_DAL\obj\Debug\BLL_DAL.csprojAssemblyReference.cache
+D:\DoAnMonHocPTPM\Nhom\DoAnMonPTPM\BLL_DAL\obj\Debug\BLL_DAL.csproj.CoreCompileInputs.cache
+D:\DoAnMonHocPTPM\Nhom\DoAnMonPTPM\BLL_DAL\obj\Debug\BLL_DAL.dll
+D:\DoAnMonHocPTPM\Nhom\DoAnMonPTPM\BLL_DAL\obj\Debug\BLL_DAL.pdb

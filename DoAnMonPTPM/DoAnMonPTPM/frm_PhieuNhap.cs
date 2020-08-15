@@ -175,7 +175,6 @@ namespace DoAnMonPTPM
                     {
                         MessageBox.Show("Có Thông Tin Chưa Được Nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-
                 }
             }
             catch
@@ -243,7 +242,7 @@ namespace DoAnMonPTPM
             }
             try
             {
-                string mancc = cboMaNCC.Text;
+
                 string manv = txtMaNV.EditValue.ToString();
                 DateTime ngaylap = dateNgayLap.Value;
                 string madondat = txtMaDonDat.EditValue.ToString();
@@ -253,10 +252,18 @@ namespace DoAnMonPTPM
                     "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
                 if (result == DialogResult.Yes)
                 {
-
-                    pn_bll.suaPhieuNhap(mapn, mancc, madondat, ngaylap);
-                    loadDataPN();
-                    MessageBox.Show("Sửa Thành Công Phiếu Nhập " + mapn, "Thông Báo");
+                    if (txtMaDonDat.Text != string.Empty)
+                    {
+                        pn_bll.suaPhieuNhap(mapn, madondat);
+                        loadDataPN();
+                        MessageBox.Show("Sửa Thành Công Phiếu Nhập " + mapn, "Thông Báo");
+                        Clear_PN();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mã đơn đặt còn để trống " , "Thông Báo");
+                    }
+                   
                 }
             }
             catch

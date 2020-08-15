@@ -43,14 +43,11 @@ namespace BLL_DAL
             qlch.SubmitChanges();
         }
 
-        public void suaPhieuNhap(string mapn, string mancc, string madondat,
-            DateTime ngaylap)
+        public void suaPhieuNhap(string mapn,  string madondat)
         {
             PHIEUNHAP pn = qlch.PHIEUNHAPs.Where(d => d.MAPN == mapn).FirstOrDefault();
             pn.MAPN = mapn;
-            pn.MANCC = mancc;
             pn.MADONDOAT = madondat;
-            pn.NGAYLAP = ngaylap;
             qlch.SubmitChanges();
         }
 

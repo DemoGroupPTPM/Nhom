@@ -67,6 +67,7 @@
             this.SOLUONG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DONVITINH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.THANHTIEN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TENHANG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
             this.btnThanhToan = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
@@ -129,7 +130,7 @@
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(549, 29);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(5);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(271, 30);
             this.labelControl1.TabIndex = 7;
@@ -142,7 +143,7 @@
             this.groupControl1.Controls.Add(this.groupControl3);
             this.groupControl1.Controls.Add(this.groupControl2);
             this.groupControl1.Location = new System.Drawing.Point(35, 58);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(5);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(1380, 415);
             this.groupControl1.TabIndex = 6;
@@ -151,7 +152,7 @@
             // simpleButton1
             // 
             this.simpleButton1.Location = new System.Drawing.Point(679, 101);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(5);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(45, 35);
             this.simpleButton1.TabIndex = 3;
@@ -159,13 +160,13 @@
             // 
             // gcHoaDon
             // 
-            this.gcHoaDon.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.gcHoaDon.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5);
             gridLevelNode1.RelationName = "Level1";
             this.gcHoaDon.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
             this.gcHoaDon.Location = new System.Drawing.Point(734, 54);
             this.gcHoaDon.MainView = this.gvHoaDon;
-            this.gcHoaDon.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.gcHoaDon.Margin = new System.Windows.Forms.Padding(5);
             this.gcHoaDon.Name = "gcHoaDon";
             this.gcHoaDon.Size = new System.Drawing.Size(626, 322);
             this.gcHoaDon.TabIndex = 2;
@@ -243,7 +244,7 @@
             this.groupControl3.Controls.Add(this.btnXoaHD);
             this.groupControl3.Controls.Add(this.btnThemHD);
             this.groupControl3.Location = new System.Drawing.Point(24, 274);
-            this.groupControl3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(5);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(644, 102);
             this.groupControl3.TabIndex = 1;
@@ -253,7 +254,7 @@
             // 
             this.btnLamMoiHD.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoiHD.ImageOptions.Image")));
             this.btnLamMoiHD.Location = new System.Drawing.Point(490, 35);
-            this.btnLamMoiHD.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLamMoiHD.Margin = new System.Windows.Forms.Padding(5);
             this.btnLamMoiHD.Name = "btnLamMoiHD";
             this.btnLamMoiHD.Size = new System.Drawing.Size(141, 46);
             this.btnLamMoiHD.TabIndex = 3;
@@ -264,7 +265,7 @@
             // 
             this.btnSuaHD.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSuaHD.ImageOptions.Image")));
             this.btnSuaHD.Location = new System.Drawing.Point(331, 35);
-            this.btnSuaHD.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnSuaHD.Margin = new System.Windows.Forms.Padding(5);
             this.btnSuaHD.Name = "btnSuaHD";
             this.btnSuaHD.Size = new System.Drawing.Size(125, 46);
             this.btnSuaHD.TabIndex = 2;
@@ -275,7 +276,7 @@
             // 
             this.btnXoaHD.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaHD.ImageOptions.Image")));
             this.btnXoaHD.Location = new System.Drawing.Point(166, 35);
-            this.btnXoaHD.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnXoaHD.Margin = new System.Windows.Forms.Padding(5);
             this.btnXoaHD.Name = "btnXoaHD";
             this.btnXoaHD.Size = new System.Drawing.Size(125, 46);
             this.btnXoaHD.TabIndex = 1;
@@ -286,7 +287,7 @@
             // 
             this.btnThemHD.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemHD.ImageOptions.Image")));
             this.btnThemHD.Location = new System.Drawing.Point(9, 35);
-            this.btnThemHD.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnThemHD.Margin = new System.Windows.Forms.Padding(5);
             this.btnThemHD.Name = "btnThemHD";
             this.btnThemHD.Size = new System.Drawing.Size(125, 46);
             this.btnThemHD.TabIndex = 0;
@@ -306,7 +307,7 @@
             this.groupControl2.Controls.Add(this.labelControl2);
             this.groupControl2.Controls.Add(this.txtMaHD);
             this.groupControl2.Location = new System.Drawing.Point(24, 54);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(5);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(644, 210);
             this.groupControl2.TabIndex = 0;
@@ -316,7 +317,7 @@
             // 
             this.txtTongTien_HD.Enabled = false;
             this.txtTongTien_HD.Location = new System.Drawing.Point(440, 114);
-            this.txtTongTien_HD.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtTongTien_HD.Margin = new System.Windows.Forms.Padding(5);
             this.txtTongTien_HD.Name = "txtTongTien_HD";
             this.txtTongTien_HD.Size = new System.Drawing.Size(164, 23);
             this.txtTongTien_HD.TabIndex = 12;
@@ -327,7 +328,7 @@
             this.dateNgayLap.CustomFormat = "yyyy.MM.dd";
             this.dateNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateNgayLap.Location = new System.Drawing.Point(440, 65);
-            this.dateNgayLap.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dateNgayLap.Margin = new System.Windows.Forms.Padding(5);
             this.dateNgayLap.Name = "dateNgayLap";
             this.dateNgayLap.Size = new System.Drawing.Size(185, 23);
             this.dateNgayLap.TabIndex = 11;
@@ -336,7 +337,7 @@
             // 
             this.cboMaKH_HD.FormattingEnabled = true;
             this.cboMaKH_HD.Location = new System.Drawing.Point(143, 114);
-            this.cboMaKH_HD.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cboMaKH_HD.Margin = new System.Windows.Forms.Padding(5);
             this.cboMaKH_HD.Name = "cboMaKH_HD";
             this.cboMaKH_HD.Size = new System.Drawing.Size(160, 24);
             this.cboMaKH_HD.TabIndex = 10;
@@ -345,7 +346,7 @@
             // labelControl6
             // 
             this.labelControl6.Location = new System.Drawing.Point(350, 114);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(5);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(61, 17);
             this.labelControl6.TabIndex = 8;
@@ -354,7 +355,7 @@
             // labelControl5
             // 
             this.labelControl5.Location = new System.Drawing.Point(351, 65);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(5);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(58, 17);
             this.labelControl5.TabIndex = 7;
@@ -364,7 +365,7 @@
             // 
             this.txtMaNV_HD.Enabled = false;
             this.txtMaNV_HD.Location = new System.Drawing.Point(143, 170);
-            this.txtMaNV_HD.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMaNV_HD.Margin = new System.Windows.Forms.Padding(5);
             this.txtMaNV_HD.Name = "txtMaNV_HD";
             this.txtMaNV_HD.Size = new System.Drawing.Size(166, 22);
             this.txtMaNV_HD.TabIndex = 5;
@@ -372,7 +373,7 @@
             // labelControl4
             // 
             this.labelControl4.Location = new System.Drawing.Point(11, 175);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(5);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(79, 16);
             this.labelControl4.TabIndex = 3;
@@ -381,7 +382,7 @@
             // labelControl3
             // 
             this.labelControl3.Location = new System.Drawing.Point(8, 114);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(5);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(88, 16);
             this.labelControl3.TabIndex = 2;
@@ -390,7 +391,7 @@
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(9, 65);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(5);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(70, 16);
             this.labelControl2.TabIndex = 1;
@@ -400,7 +401,7 @@
             // 
             this.txtMaHD.Enabled = false;
             this.txtMaHD.Location = new System.Drawing.Point(140, 60);
-            this.txtMaHD.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMaHD.Margin = new System.Windows.Forms.Padding(5);
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.Size = new System.Drawing.Size(166, 22);
             this.txtMaHD.TabIndex = 0;
@@ -411,7 +412,7 @@
             this.groupControl4.Controls.Add(this.groupControl5);
             this.groupControl4.Controls.Add(this.groupControl6);
             this.groupControl4.Location = new System.Drawing.Point(35, 483);
-            this.groupControl4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupControl4.Margin = new System.Windows.Forms.Padding(5);
             this.groupControl4.Name = "groupControl4";
             this.groupControl4.Size = new System.Drawing.Size(1380, 456);
             this.groupControl4.TabIndex = 8;
@@ -419,13 +420,13 @@
             // 
             // gcCTHD
             // 
-            this.gcCTHD.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.gcCTHD.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5);
             gridLevelNode2.RelationName = "Level1";
             this.gcCTHD.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode2});
             this.gcCTHD.Location = new System.Drawing.Point(678, 33);
             this.gcCTHD.MainView = this.gvCTHD;
-            this.gcCTHD.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.gcCTHD.Margin = new System.Windows.Forms.Padding(5);
             this.gcCTHD.Name = "gcCTHD";
             this.gcCTHD.Size = new System.Drawing.Size(666, 393);
             this.gcCTHD.TabIndex = 2;
@@ -440,7 +441,8 @@
             this.DONGIA,
             this.SOLUONG,
             this.DONVITINH,
-            this.THANHTIEN});
+            this.THANHTIEN,
+            this.TENHANG});
             this.gvCTHD.DetailHeight = 539;
             this.gvCTHD.GridControl = this.gcCTHD;
             this.gvCTHD.Name = "gvCTHD";
@@ -473,7 +475,7 @@
             this.DONGIA.MinWidth = 31;
             this.DONGIA.Name = "DONGIA";
             this.DONGIA.Visible = true;
-            this.DONGIA.VisibleIndex = 2;
+            this.DONGIA.VisibleIndex = 3;
             this.DONGIA.Width = 117;
             // 
             // SOLUONG
@@ -483,7 +485,7 @@
             this.SOLUONG.MinWidth = 31;
             this.SOLUONG.Name = "SOLUONG";
             this.SOLUONG.Visible = true;
-            this.SOLUONG.VisibleIndex = 3;
+            this.SOLUONG.VisibleIndex = 4;
             this.SOLUONG.Width = 117;
             // 
             // DONVITINH
@@ -493,7 +495,7 @@
             this.DONVITINH.MinWidth = 31;
             this.DONVITINH.Name = "DONVITINH";
             this.DONVITINH.Visible = true;
-            this.DONVITINH.VisibleIndex = 4;
+            this.DONVITINH.VisibleIndex = 5;
             this.DONVITINH.Width = 117;
             // 
             // THANHTIEN
@@ -503,8 +505,18 @@
             this.THANHTIEN.MinWidth = 31;
             this.THANHTIEN.Name = "THANHTIEN";
             this.THANHTIEN.Visible = true;
-            this.THANHTIEN.VisibleIndex = 5;
+            this.THANHTIEN.VisibleIndex = 6;
             this.THANHTIEN.Width = 117;
+            // 
+            // TENHANG
+            // 
+            this.TENHANG.Caption = "Tên sản phẩm";
+            this.TENHANG.FieldName = "TENHANG";
+            this.TENHANG.MinWidth = 25;
+            this.TENHANG.Name = "TENHANG";
+            this.TENHANG.Visible = true;
+            this.TENHANG.VisibleIndex = 2;
+            this.TENHANG.Width = 94;
             // 
             // groupControl5
             // 
@@ -515,7 +527,7 @@
             this.groupControl5.Controls.Add(this.btnXoaCTHD);
             this.groupControl5.Controls.Add(this.btnThemCTHD);
             this.groupControl5.Location = new System.Drawing.Point(24, 269);
-            this.groupControl5.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupControl5.Margin = new System.Windows.Forms.Padding(5);
             this.groupControl5.Name = "groupControl5";
             this.groupControl5.Size = new System.Drawing.Size(644, 157);
             this.groupControl5.TabIndex = 1;
@@ -525,7 +537,7 @@
             // 
             this.btnThanhToan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThanhToan.ImageOptions.Image")));
             this.btnThanhToan.Location = new System.Drawing.Point(369, 87);
-            this.btnThanhToan.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnThanhToan.Margin = new System.Windows.Forms.Padding(5);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(185, 49);
             this.btnThanhToan.TabIndex = 5;
@@ -536,7 +548,7 @@
             // 
             this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
             this.btnLuu.Location = new System.Drawing.Point(184, 35);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(5);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(125, 40);
             this.btnLuu.TabIndex = 4;
@@ -547,7 +559,7 @@
             // 
             this.btnLamMoiCTHD.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoiCTHD.ImageOptions.Image")));
             this.btnLamMoiCTHD.Location = new System.Drawing.Point(184, 87);
-            this.btnLamMoiCTHD.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLamMoiCTHD.Margin = new System.Windows.Forms.Padding(5);
             this.btnLamMoiCTHD.Name = "btnLamMoiCTHD";
             this.btnLamMoiCTHD.Size = new System.Drawing.Size(175, 49);
             this.btnLamMoiCTHD.TabIndex = 3;
@@ -558,7 +570,7 @@
             // 
             this.btnSuaCTHD.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSuaCTHD.ImageOptions.Image")));
             this.btnSuaCTHD.Location = new System.Drawing.Point(369, 35);
-            this.btnSuaCTHD.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnSuaCTHD.Margin = new System.Windows.Forms.Padding(5);
             this.btnSuaCTHD.Name = "btnSuaCTHD";
             this.btnSuaCTHD.Size = new System.Drawing.Size(125, 42);
             this.btnSuaCTHD.TabIndex = 2;
@@ -569,7 +581,7 @@
             // 
             this.btnXoaCTHD.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaCTHD.ImageOptions.Image")));
             this.btnXoaCTHD.Location = new System.Drawing.Point(16, 87);
-            this.btnXoaCTHD.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnXoaCTHD.Margin = new System.Windows.Forms.Padding(5);
             this.btnXoaCTHD.Name = "btnXoaCTHD";
             this.btnXoaCTHD.Size = new System.Drawing.Size(125, 49);
             this.btnXoaCTHD.TabIndex = 1;
@@ -580,7 +592,7 @@
             // 
             this.btnThemCTHD.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemCTHD.ImageOptions.Image")));
             this.btnThemCTHD.Location = new System.Drawing.Point(16, 37);
-            this.btnThemCTHD.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnThemCTHD.Margin = new System.Windows.Forms.Padding(5);
             this.btnThemCTHD.Name = "btnThemCTHD";
             this.btnThemCTHD.Size = new System.Drawing.Size(125, 40);
             this.btnThemCTHD.TabIndex = 0;
@@ -606,7 +618,7 @@
             this.groupControl6.Controls.Add(this.labelControl10);
             this.groupControl6.Controls.Add(this.labelControl11);
             this.groupControl6.Location = new System.Drawing.Point(24, 33);
-            this.groupControl6.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupControl6.Margin = new System.Windows.Forms.Padding(5);
             this.groupControl6.Name = "groupControl6";
             this.groupControl6.Size = new System.Drawing.Size(644, 226);
             this.groupControl6.TabIndex = 0;
@@ -616,7 +628,7 @@
             // 
             this.txtTongTien_CTHD.Enabled = false;
             this.txtTongTien_CTHD.Location = new System.Drawing.Point(436, 182);
-            this.txtTongTien_CTHD.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtTongTien_CTHD.Margin = new System.Windows.Forms.Padding(5);
             this.txtTongTien_CTHD.Name = "txtTongTien_CTHD";
             this.txtTongTien_CTHD.Size = new System.Drawing.Size(189, 23);
             this.txtTongTien_CTHD.TabIndex = 21;
@@ -626,7 +638,7 @@
             // 
             this.txtThanhTien_CTHD.Enabled = false;
             this.txtThanhTien_CTHD.Location = new System.Drawing.Point(136, 182);
-            this.txtThanhTien_CTHD.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtThanhTien_CTHD.Margin = new System.Windows.Forms.Padding(5);
             this.txtThanhTien_CTHD.Name = "txtThanhTien_CTHD";
             this.txtThanhTien_CTHD.Size = new System.Drawing.Size(168, 23);
             this.txtThanhTien_CTHD.TabIndex = 20;
@@ -635,7 +647,7 @@
             // txtDonGia_CTHD
             // 
             this.txtDonGia_CTHD.Location = new System.Drawing.Point(136, 140);
-            this.txtDonGia_CTHD.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDonGia_CTHD.Margin = new System.Windows.Forms.Padding(5);
             this.txtDonGia_CTHD.Name = "txtDonGia_CTHD";
             this.txtDonGia_CTHD.Size = new System.Drawing.Size(170, 23);
             this.txtDonGia_CTHD.TabIndex = 19;
@@ -644,7 +656,7 @@
             // labelControl14
             // 
             this.labelControl14.Location = new System.Drawing.Point(348, 185);
-            this.labelControl14.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.labelControl14.Margin = new System.Windows.Forms.Padding(5);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(61, 17);
             this.labelControl14.TabIndex = 18;
@@ -653,7 +665,7 @@
             // txtSLHientai
             // 
             this.txtSLHientai.Location = new System.Drawing.Point(434, 91);
-            this.txtSLHientai.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtSLHientai.Margin = new System.Windows.Forms.Padding(5);
             this.txtSLHientai.Name = "txtSLHientai";
             this.txtSLHientai.Size = new System.Drawing.Size(191, 22);
             this.txtSLHientai.TabIndex = 16;
@@ -662,7 +674,7 @@
             // labelControl13
             // 
             this.labelControl13.Location = new System.Drawing.Point(339, 138);
-            this.labelControl13.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.labelControl13.Margin = new System.Windows.Forms.Padding(5);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(70, 17);
             this.labelControl13.TabIndex = 15;
@@ -672,7 +684,7 @@
             // 
             this.cboMaSP_CTHD.FormattingEnabled = true;
             this.cboMaSP_CTHD.Location = new System.Drawing.Point(139, 91);
-            this.cboMaSP_CTHD.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cboMaSP_CTHD.Margin = new System.Windows.Forms.Padding(5);
             this.cboMaSP_CTHD.Name = "cboMaSP_CTHD";
             this.cboMaSP_CTHD.Size = new System.Drawing.Size(165, 24);
             this.cboMaSP_CTHD.TabIndex = 14;
@@ -682,7 +694,7 @@
             // 
             this.cboMaHD_CTHD.FormattingEnabled = true;
             this.cboMaHD_CTHD.Location = new System.Drawing.Point(136, 49);
-            this.cboMaHD_CTHD.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cboMaHD_CTHD.Margin = new System.Windows.Forms.Padding(5);
             this.cboMaHD_CTHD.Name = "cboMaHD_CTHD";
             this.cboMaHD_CTHD.Size = new System.Drawing.Size(165, 24);
             this.cboMaHD_CTHD.TabIndex = 13;
@@ -691,7 +703,7 @@
             // txtSL_CTHD
             // 
             this.txtSL_CTHD.Location = new System.Drawing.Point(434, 51);
-            this.txtSL_CTHD.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtSL_CTHD.Margin = new System.Windows.Forms.Padding(5);
             this.txtSL_CTHD.Name = "txtSL_CTHD";
             this.txtSL_CTHD.Size = new System.Drawing.Size(191, 22);
             this.txtSL_CTHD.TabIndex = 12;
@@ -702,7 +714,7 @@
             // labelControl12
             // 
             this.labelControl12.Location = new System.Drawing.Point(9, 182);
-            this.labelControl12.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.labelControl12.Margin = new System.Windows.Forms.Padding(5);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(68, 17);
             this.labelControl12.TabIndex = 10;
@@ -711,7 +723,7 @@
             // txtDVTCTHD
             // 
             this.txtDVTCTHD.Location = new System.Drawing.Point(436, 140);
-            this.txtDVTCTHD.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDVTCTHD.Margin = new System.Windows.Forms.Padding(5);
             this.txtDVTCTHD.Name = "txtDVTCTHD";
             this.txtDVTCTHD.Size = new System.Drawing.Size(191, 22);
             this.txtDVTCTHD.TabIndex = 9;
@@ -719,7 +731,7 @@
             // labelControl7
             // 
             this.labelControl7.Location = new System.Drawing.Point(333, 96);
-            this.labelControl7.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(5);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(78, 17);
             this.labelControl7.TabIndex = 8;
@@ -728,7 +740,7 @@
             // labelControl8
             // 
             this.labelControl8.Location = new System.Drawing.Point(348, 52);
-            this.labelControl8.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(5);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(60, 17);
             this.labelControl8.TabIndex = 7;
@@ -737,7 +749,7 @@
             // labelControl9
             // 
             this.labelControl9.Location = new System.Drawing.Point(10, 138);
-            this.labelControl9.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.labelControl9.Margin = new System.Windows.Forms.Padding(5);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(45, 16);
             this.labelControl9.TabIndex = 3;
@@ -746,7 +758,7 @@
             // labelControl10
             // 
             this.labelControl10.Location = new System.Drawing.Point(11, 98);
-            this.labelControl10.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.labelControl10.Margin = new System.Windows.Forms.Padding(5);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(83, 17);
             this.labelControl10.TabIndex = 2;
@@ -755,7 +767,7 @@
             // labelControl11
             // 
             this.labelControl11.Location = new System.Drawing.Point(16, 49);
-            this.labelControl11.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.labelControl11.Margin = new System.Windows.Forms.Padding(5);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(70, 16);
             this.labelControl11.TabIndex = 1;
@@ -950,5 +962,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn SOLUONG;
         private DevExpress.XtraGrid.Columns.GridColumn DONVITINH;
         private DevExpress.XtraGrid.Columns.GridColumn THANHTIEN;
+        private DevExpress.XtraGrid.Columns.GridColumn TENHANG;
     }
 }

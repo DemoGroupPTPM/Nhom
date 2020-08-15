@@ -276,7 +276,6 @@ D:\TaiXuong\DoAnMonPTPM\DoAnMonPTPM\obj\Debug\RdlCompile.compiled
 D:\TaiXuong\DoAnMonPTPM\DoAnMonPTPM\obj\Debug\DoAnMonPTPM.frm_HoaDon_CoNgay.resources
 D:\TaiXuong\DoAnMonPTPM\DoAnMonPTPM\obj\Debug\DoAnMonPTPM.frm_BaoCao_PN.resources
 D:\TaiXuong\DoAnMonPTPM\DoAnMonPTPM\obj\Debug\DoAnMonPTPM.frm_BaoCao_PN_TheoNgay.resources
-D:\DoAnMonHocPTPM\Nhom\DoAnMonPTPM\DoAnMonPTPM\obj\Debug\DoAnMonPTPM.csprojAssemblyReference.cache
 D:\DoAnMonHocPTPM\Nhom\DoAnMonPTPM\DoAnMonPTPM\obj\Debug\DoAnMonPTPM.frmMain.resources
 D:\DoAnMonHocPTPM\Nhom\DoAnMonPTPM\DoAnMonPTPM\obj\Debug\DoAnMonPTPM.frm_BaoCao_PN.resources
 D:\DoAnMonHocPTPM\Nhom\DoAnMonPTPM\DoAnMonPTPM\obj\Debug\DoAnMonPTPM.frm_BaoCao_PN_TheoNgay.resources
@@ -447,3 +446,6 @@ D:\DoAnMonHocPTPM\Nhom\DoAnMonPTPM\DoAnMonPTPM\bin\Debug\es\DevExpress.Office.v2
 D:\DoAnMonHocPTPM\Nhom\DoAnMonPTPM\DoAnMonPTPM\bin\Debug\ja\DevExpress.Office.v20.1.Core.resources.dll
 D:\DoAnMonHocPTPM\Nhom\DoAnMonPTPM\DoAnMonPTPM\bin\Debug\ru\DevExpress.Office.v20.1.Core.resources.dll
 D:\DoAnMonHocPTPM\Nhom\DoAnMonPTPM\DoAnMonPTPM\obj\Debug\DoAnMonPTPM.csproj.CopyComplete
+D:\DoAnMonHocPTPM\Nhom\DoAnMonPTPM\DoAnMonPTPM\obj\Debug\DoAnMonPTPM.csprojAssemblyReference.cache
+D:\DoAnMonHocPTPM\Nhom\DoAnMonPTPM\DoAnMonPTPM\obj\Debug\DoAnMonPTPM.Form1.resources
+D:\DoAnMonHocPTPM\Nhom\DoAnMonPTPM\DoAnMonPTPM\obj\Debug\DoAnMonPTPM.Form2.resources

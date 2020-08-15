@@ -77,7 +77,6 @@ namespace DoAnMonPTPM
                             loadDataGridViewNCC();
                             loadMaNCCTuTao();
                             lammoi();
-
                         }
                         else
                         {
@@ -118,6 +117,7 @@ namespace DoAnMonPTPM
             object value = gvNCC.GetRowCellValue(id, ma);
             try
             {
+                
                 DialogResult result;
                 result = MessageBox.Show("Bạn Có Muốn Xóa Nhà Cung Cấp  " + value.ToString() + " ?",
                     "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
@@ -142,6 +142,7 @@ namespace DoAnMonPTPM
             object value = gvNCC.GetRowCellValue(id, ma);
             try
             {
+                
                 string tenncc = txtTenNCC.EditValue.ToString();
                 string dt = txtSDTNCC.EditValue.ToString();
                 string diachi = txtDiaChiNCC.EditValue.ToString();
@@ -202,18 +203,7 @@ namespace DoAnMonPTPM
 
         private void gvNCC_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            txtMaNCC.EditValue = gvNCC.GetRowCellValue(gvNCC.FocusedRowHandle, "MANCC").ToString();
-            txtTenNCC.EditValue = gvNCC.GetRowCellValue(gvNCC.FocusedRowHandle, "TENNCC").ToString();
-            txtDiaChiNCC.EditValue = gvNCC.GetRowCellValue(gvNCC.FocusedRowHandle, "DIACHI").ToString();
-            txtSDTNCC.EditValue = gvNCC.GetRowCellValue(gvNCC.FocusedRowHandle, "DIENTHOAI").ToString();
-            if (gvNCC.GetRowCellValue(gvNCC.FocusedRowHandle, "CHUTHICH") == null)
-            {
-                txtChuThich_NCC.EditValue = "";
-            }
-            else
-            {
-                txtChuThich_NCC.EditValue = gvNCC.GetRowCellValue(gvNCC.FocusedRowHandle, "CHUTHICH").ToString();
-            }
+            
         }
 
         private void txtDiaChiNCC_Leave(object sender, EventArgs e)
@@ -268,6 +258,25 @@ namespace DoAnMonPTPM
             }
             else
                 dxErrorProvider1.ClearErrors();
+        }
+
+        private void gvNCC_FocusedRowChanged_1(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            if (gvNCC.RowCount != 0)
+            {
+                txtMaNCC.EditValue = gvNCC.GetRowCellValue(gvNCC.FocusedRowHandle, "MANCC").ToString();
+                txtTenNCC.EditValue = gvNCC.GetRowCellValue(gvNCC.FocusedRowHandle, "TENNCC").ToString();
+                txtDiaChiNCC.EditValue = gvNCC.GetRowCellValue(gvNCC.FocusedRowHandle, "DIACHI").ToString();
+                txtSDTNCC.EditValue = gvNCC.GetRowCellValue(gvNCC.FocusedRowHandle, "DIENTHOAI").ToString();
+                if (gvNCC.GetRowCellValue(gvNCC.FocusedRowHandle, "CHUTHICH") == null)
+                {
+                    txtChuThich_NCC.EditValue = "";
+                }
+                else
+                {
+                    txtChuThich_NCC.EditValue = gvNCC.GetRowCellValue(gvNCC.FocusedRowHandle, "CHUTHICH").ToString();
+                }
+            }
         }
     }
 }

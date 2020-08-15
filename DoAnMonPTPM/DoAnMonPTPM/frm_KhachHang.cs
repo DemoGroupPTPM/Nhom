@@ -52,11 +52,11 @@ namespace DoAnMonPTPM
                 string dt = txtSDTKH.EditValue.ToString();
 
                 string email = txtEmailKH.EditValue.ToString();
-                if (email.Contains('@'))
-                {
-                    string[] t = email.Split('@');
-                    t[0] = email;
-                }
+                //if (email.Contains('@'))
+                //{
+                //    string[] t = email.Split('@');
+                //    t[0] = email;
+                //}
 
                 // kt xem textbox có bị bỏ trống không
                 if (makh != string.Empty && tenkh != string.Empty && dt != string.Empty && diachi != string.Empty &&
@@ -107,14 +107,10 @@ namespace DoAnMonPTPM
                         txtEmailKH.Focus();
                     }
                 }
-
-
             }
             catch
             {
                 MessageBox.Show("Có Vấn Đề Trong Việc Thêm Khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
             }
         }
 
@@ -134,7 +130,6 @@ namespace DoAnMonPTPM
                     loadDataKH();
                     MessageBox.Show("Xóa Thành Công Khách hàng " + value.ToString());
                     lammoi();
-
                 }
             }
             catch
@@ -177,7 +172,6 @@ namespace DoAnMonPTPM
         void lammoi()
         {
             loadMaKHTuTao();
-
             txtMaKH.Enabled = false;
             txtTenKH.EditValue = "";
             txtDiaChiKH.EditValue = "";
@@ -203,11 +197,6 @@ namespace DoAnMonPTPM
      
         private void gvKhachHang_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            txtMaKH.EditValue = gvKhachHang.GetRowCellValue(gvKhachHang.FocusedRowHandle, "MAKHACHHANG").ToString();
-            txtTenKH.EditValue = gvKhachHang.GetRowCellValue(gvKhachHang.FocusedRowHandle, "TENKHACHHANG").ToString();
-            txtDiaChiKH.EditValue = gvKhachHang.GetRowCellValue(gvKhachHang.FocusedRowHandle, "DIACHI").ToString();
-            txtSDTKH.EditValue = gvKhachHang.GetRowCellValue(gvKhachHang.FocusedRowHandle, "DIENTHOAI").ToString();
-            txtEmailKH.EditValue = gvKhachHang.GetRowCellValue(gvKhachHang.FocusedRowHandle, "EMAIL").ToString();
         }
 
         private void txtEmailKH_Leave(object sender, EventArgs e)
@@ -236,7 +225,6 @@ namespace DoAnMonPTPM
             {
                 e.Handled = true;
                 errorProvider1.SetError(ctr, "Số điện thoại chỉ có số");
-
             }
             else
                 errorProvider1.Clear();
@@ -293,6 +281,19 @@ namespace DoAnMonPTPM
             else
             {
                 errorProvider1.Clear();
+            }
+        }
+
+        private void gvKhachHang_FocusedRowChanged_1(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+
+            if (gvKhachHang.RowCount != 0)
+            {
+                txtMaKH.EditValue = gvKhachHang.GetRowCellValue(gvKhachHang.FocusedRowHandle, "MAKHACHHANG").ToString();
+                txtTenKH.EditValue = gvKhachHang.GetRowCellValue(gvKhachHang.FocusedRowHandle, "TENKHACHHANG").ToString();
+                txtDiaChiKH.EditValue = gvKhachHang.GetRowCellValue(gvKhachHang.FocusedRowHandle, "DIACHI").ToString();
+                txtSDTKH.EditValue = gvKhachHang.GetRowCellValue(gvKhachHang.FocusedRowHandle, "DIENTHOAI").ToString();
+                txtEmailKH.EditValue = gvKhachHang.GetRowCellValue(gvKhachHang.FocusedRowHandle, "EMAIL").ToString();
             }
         }
     }

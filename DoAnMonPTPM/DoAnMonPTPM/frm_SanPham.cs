@@ -374,14 +374,22 @@ namespace DoAnMonPTPM
 
         private void gvSanPham_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            txtMaSP.EditValue = gvSanPham.GetRowCellValue(gvSanPham.FocusedRowHandle, "MASP").ToString();
-            cboMaLoai.SelectedValue = gvSanPham.GetRowCellValue(gvSanPham.FocusedRowHandle, "MALOAI").ToString();
-            txtTenSP.EditValue = gvSanPham.GetRowCellValue(gvSanPham.FocusedRowHandle, "TENHANG").ToString();
-            imgHinh.EditValue = gvSanPham.GetRowCellValue(gvSanPham.FocusedRowHandle, "HINHANH").ToString();
-            txtDonGiaSP.EditValue = gvSanPham.GetRowCellValue(gvSanPham.FocusedRowHandle, "DONGIA").ToString();
-            txtSL_SP.EditValue = gvSanPham.GetRowCellValue(gvSanPham.FocusedRowHandle, "SOLUONG").ToString();
-            txtBaoHnah_SP.EditValue = gvSanPham.GetRowCellValue(gvSanPham.FocusedRowHandle, "BAOHANH").ToString();
-            cboMaNCC_SP.SelectedValue = gvSanPham.GetRowCellValue(gvSanPham.FocusedRowHandle, "MANCC").ToString();
+           
+        }
+
+        private void gvSanPham_FocusedRowChanged_1(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            if (gvSanPham.RowCount != 0)
+            {
+                txtMaSP.EditValue = gvSanPham.GetRowCellValue(gvSanPham.FocusedRowHandle, "MASP").ToString();
+                cboMaLoai.SelectedValue = gvSanPham.GetRowCellValue(gvSanPham.FocusedRowHandle, "MALOAI").ToString();
+                txtTenSP.EditValue = gvSanPham.GetRowCellValue(gvSanPham.FocusedRowHandle, "TENHANG").ToString();
+                imgHinh.EditValue = gvSanPham.GetRowCellValue(gvSanPham.FocusedRowHandle, "HINHANH").ToString();
+                txtDonGiaSP.EditValue = gvSanPham.GetRowCellValue(gvSanPham.FocusedRowHandle, "DONGIA").ToString();
+                txtSL_SP.EditValue = gvSanPham.GetRowCellValue(gvSanPham.FocusedRowHandle, "SOLUONG").ToString();
+                txtBaoHnah_SP.EditValue = gvSanPham.GetRowCellValue(gvSanPham.FocusedRowHandle, "BAOHANH").ToString();
+                cboMaNCC_SP.SelectedValue = gvSanPham.GetRowCellValue(gvSanPham.FocusedRowHandle, "MANCC").ToString();
+            }
         }
     }
 }

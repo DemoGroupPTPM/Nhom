@@ -9,6 +9,7 @@ namespace BLL_DAL
     {
         NHANVIENTableAdapter nvadapter;
         QLCHDTDataContext qlch = new QLCHDTDataContext();
+        
         public NhanVien_BLL() { }
         //lấy tài khoản
         public string GetMkNV_BLL(string manv)
@@ -96,6 +97,19 @@ namespace BLL_DAL
             nv.CHUTHICH = chuthich;
             qlch.SubmitChanges();
         }
+
+       //public void  XoaChucNangNV(string manv, string maphanquyen)
+       // {
+       //     CTPHANQUYEN ctpq = qlch.CTPHANQUYENs.Where(d => d.MAPHANQUYEN == maphanquyen).FirstOrDefault();
+       //     var h = (from n in qlch.CTPHANQUYENs
+       //              where (n.MAPHANQUYEN == maphanquyen)
+       //              select n.MACHUCNANG).ToList();
+       //     foreach(string n in h)
+       //     {
+
+       //     }
+       //     qlch.CTPHANQUYENs.DeleteOnSubmit(h);
+       // }
 
         // xóa nhân viên
         public void xoaNhanVien(string manv)

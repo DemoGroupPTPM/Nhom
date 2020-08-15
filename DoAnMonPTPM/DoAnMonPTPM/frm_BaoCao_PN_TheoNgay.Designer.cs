@@ -29,24 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_BaoCao_PN_TheoNgay));
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.PHIEUNHAPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataSet_QLCH = new DoAnMonPTPM.DataSet_QLCH();
+            this.PHIEUNHAPTableAdapter = new DoAnMonPTPM.DataSet_QLCHTableAdapters.PHIEUNHAPTableAdapter();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnLoad = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker_DenNgay = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker_TuNgay = new System.Windows.Forms.DateTimePicker();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.PHIEUNHAPTableAdapter = new DoAnMonPTPM.DataSet_QLCHTableAdapters.PHIEUNHAPTableAdapter();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.PHIEUNHAPBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet_QLCH)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PHIEUNHAPBindingSource
@@ -59,17 +60,62 @@
             this.DataSet_QLCH.DataSetName = "DataSet_QLCH";
             this.DataSet_QLCH.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // PHIEUNHAPTableAdapter
+            // 
+            this.PHIEUNHAPTableAdapter.ClearBeforeFill = true;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(940, 27);
+            this.toolStrip1.TabIndex = 8;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(51, 24);
+            this.toolStripButton1.Text = "Thoát";
+            this.toolStripButton1.ToolTipText = "Thoát";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(12, 437);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1214, 54);
+            this.label1.TabIndex = 4;
+            // 
+            // reportViewer1
+            // 
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = null;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "DoAnMonPTPM.BaoCao_PN_TheoNgay.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(96, 253);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(770, 246);
+            this.reportViewer1.TabIndex = 10;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnLoad);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dateTimePicker_DenNgay);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.dateTimePicker_TuNgay);
-            this.groupBox1.Location = new System.Drawing.Point(12, 62);
+            this.groupBox1.Location = new System.Drawing.Point(96, 80);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(554, 130);
-            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chọn Thông Tin";
             // 
@@ -81,7 +127,6 @@
             this.btnLoad.TabIndex = 2;
             this.btnLoad.Text = "Load";
             this.btnLoad.UseVisualStyleBackColor = true;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // label2
             // 
@@ -101,14 +146,14 @@
             this.dateTimePicker_DenNgay.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker_DenNgay.TabIndex = 1;
             // 
-            // label1
+            // label3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Từ Ngày";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(19, 41);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 17);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Từ Ngày";
             // 
             // dateTimePicker_TuNgay
             // 
@@ -119,80 +164,42 @@
             this.dateTimePicker_TuNgay.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker_TuNgay.TabIndex = 0;
             // 
-            // reportViewer1
-            // 
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.PHIEUNHAPBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "DoAnMonPTPM.BaoCao_PN_TheoNgay.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(21, 218);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1042, 246);
-            this.reportViewer1.TabIndex = 4;
-            // 
-            // PHIEUNHAPTableAdapter
-            // 
-            this.PHIEUNHAPTableAdapter.ClearBeforeFill = true;
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1238, 27);
-            this.toolStrip1.TabIndex = 8;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(51, 24);
-            this.toolStripButton1.Text = "Thoát";
-            this.toolStripButton1.ToolTipText = "Thoát";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
             // frm_BaoCao_PN_TheoNgay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1238, 559);
-            this.Controls.Add(this.toolStrip1);
+            this.ClientSize = new System.Drawing.Size(940, 559);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.toolStrip1);
             this.Name = "frm_BaoCao_PN_TheoNgay";
             this.Text = "Báo Cáo Phiếu Nhập Có Ngày";
             this.Load += new System.EventHandler(this.frm_BaoCao_PN_TheoNgay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PHIEUNHAPBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet_QLCH)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnLoad;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker_DenNgay;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker_TuNgay;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource PHIEUNHAPBindingSource;
         private DataSet_QLCH DataSet_QLCH;
         private DataSet_QLCHTableAdapters.PHIEUNHAPTableAdapter PHIEUNHAPTableAdapter;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.Label label1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_DenNgay;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_TuNgay;
     }
 }

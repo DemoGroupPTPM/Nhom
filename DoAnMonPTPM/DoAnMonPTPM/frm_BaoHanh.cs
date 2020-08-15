@@ -37,7 +37,7 @@ namespace DoAnMonPTPM
             txtMaNV_BH.EditValue = manv_dn;
             dateNgayNhan_BH.Value = DateTime.Now;
             dateNgayTra_BH.Value = DateTime.Now.AddDays(7);
-            //clear();
+            clear();
         }
         void loadMaKH()
         {
@@ -109,6 +109,7 @@ namespace DoAnMonPTPM
             loadDataBaoHanh();
             loadTinhTrang();
             txtMaNV_BH.EditValue = manv_dn;
+            dateNgayTra_BH.Value = DateTime.Now.AddDays(7);
         }
 
         private void btnThoat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -210,7 +211,6 @@ namespace DoAnMonPTPM
             string mabh = gvBaoHanh.GetRowCellValue(gvBaoHanh.FocusedRowHandle, "MABAOHANH").ToString();
             try
             {
-
                 string yeucau = txtYeuCau.Text;
                 string tinhtrang = cboTinhTrang_BH.Text;
                 DateTime ngaytra = dateNgayTra_BH.Value;
@@ -227,6 +227,7 @@ namespace DoAnMonPTPM
                             bh_bll.SuaPhieuBaoHanh(mabh, yeucau, ngaytra, tinhtrang);
                             loadDataBaoHanh();
                             MessageBox.Show("Sửa Thành Công Phiếu Bảo Hành " + mabh, "Thông Báo");
+                            clear();
                         }
                         else
                         {
@@ -237,7 +238,6 @@ namespace DoAnMonPTPM
                     {
                         MessageBox.Show("Phiếu Bảo Hành Đã Hoàn Thành Không Thể Chỉnh Sửa ", "Thông Báo");
                     }
-
                 }
             }
             catch
@@ -253,7 +253,13 @@ namespace DoAnMonPTPM
 
         private void gvBaoHanh_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-          if(gvBaoHanh.RowCount != 0)
+         
+           
+        }
+
+        private void gvBaoHanh_FocusedRowChanged_1(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            if (gvBaoHanh.RowCount != 0)
             {
                 txtMaBH.EditValue = gvBaoHanh.GetRowCellValue(gvBaoHanh.FocusedRowHandle, "MABAOHANH").ToString();
                 cboMaKH_BH.Text = gvBaoHanh.GetRowCellValue(gvBaoHanh.FocusedRowHandle, "MAKHACHHANG").ToString();
@@ -264,7 +270,6 @@ namespace DoAnMonPTPM
                 dateNgayTra_BH.Text = gvBaoHanh.GetRowCellValue(gvBaoHanh.FocusedRowHandle, "NGAYTRA").ToString();
                 cboTinhTrang_BH.Text = gvBaoHanh.GetRowCellValue(gvBaoHanh.FocusedRowHandle, "TINHTRANG").ToString();
             }
-           
         }
     }
 }

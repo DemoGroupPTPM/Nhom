@@ -20,8 +20,8 @@ namespace DoAnMonPTPM
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frm_DangNhap());
             //Application.Run(new frmMain());
-            //Application.Run(new frm_NhanVien());
-            // Application.Run(new frm_KhachHang());
+         //Application.Run(new frm_NhanVien());
+             //Application.Run(new frm_KhachHang());
             //Application.Run(new frm_LoaiHang());
             //Application.Run(new frm_SanPham());
             //Application.Run(new frm_PhieuNhap()); 

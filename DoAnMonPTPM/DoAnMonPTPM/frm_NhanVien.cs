@@ -44,7 +44,6 @@ namespace DoAnMonPTPM
         void loadDataNhanVien()
         {
             gcNhanVien.DataSource = nv_bll.LoadNhanVien_BLL();
-
         }
 
         // combobox phân quyền
@@ -59,14 +58,7 @@ namespace DoAnMonPTPM
 
         private void cboQuyen_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboQuyen.SelectedIndex != -1)
-            {
-                listBoxChucNang.DataSource = pq_bll.LoadChucNang_PhanQuyen_BLL(cboQuyen.SelectedValue.ToString());
-                listBoxChucNang.DisplayMember = "MACHUCNANG";
-                listBoxChucNang.ValueMember = "MACHUCNANG";
-                //listBoxChucNang.DataSource = pq_bll.LoadChucNang_PhanQuyen_BLL(cboQuyen.SelectedValue.ToString());
-                //listBoxChucNang.DisplayMember = "MACHUCNANG";
-            }
+          
         }
 
         private void txtDienThoai_KeyPress(object sender, KeyPressEventArgs e)
@@ -332,12 +324,12 @@ namespace DoAnMonPTPM
                     lammoi();
 
                 }
-            }
+        }
             catch
             {
                 MessageBox.Show("Có Vấn Đề Trong Việc sửa Nhân Viên  " + value.ToString());
             }
-        }
+}
         void lammoi()
         {
             loadMaNVTuTao();
@@ -368,6 +360,27 @@ namespace DoAnMonPTPM
 
         private void gvNhanVien_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
+           
+        }
+
+        private void listBoxChucNang_Click(object sender, EventArgs e)
+        {
+            string macn="";
+            if (listBoxChucNang.Items.Count != 0)
+            {
+                macn = listBoxChucNang.SelectedValue.ToString();
+                listBoxTenChucNang.DataSource = cn_BLL.LoadTenChucNang_BLL(macn);
+                listBoxTenChucNang.DisplayMember = "TENCHUCNANG";
+            }
+        }
+
+        private void gvNhanVien_FocusedRowChanged_1(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+           
+        }
+
+        private void gvNhanVien_FocusedRowChanged_2(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
             txtMaNV.EditValue = gvNhanVien.GetRowCellValue(gvNhanVien.FocusedRowHandle, "MANV").ToString();
             txtMatKhau.EditValue = gvNhanVien.GetRowCellValue(gvNhanVien.FocusedRowHandle, "MATKHAU").ToString();
             txtTenNV.EditValue = gvNhanVien.GetRowCellValue(gvNhanVien.FocusedRowHandle, "TENNV").ToString();
@@ -394,14 +407,15 @@ namespace DoAnMonPTPM
             }
         }
 
-        private void listBoxChucNang_Click(object sender, EventArgs e)
+        private void cboQuyen_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            string macn="";
-            if (listBoxChucNang.Items.Count != 0)
+            if (cboQuyen.SelectedIndex != -1)
             {
-                macn = listBoxChucNang.SelectedValue.ToString();
-                listBoxTenChucNang.DataSource = cn_BLL.LoadTenChucNang_BLL(macn);
-                listBoxTenChucNang.DisplayMember = "TENCHUCNANG";
+                listBoxChucNang.DataSource = pq_bll.LoadChucNang_PhanQuyen_BLL(cboQuyen.SelectedValue.ToString());
+                listBoxChucNang.DisplayMember = "MACHUCNANG";
+                listBoxChucNang.ValueMember = "MACHUCNANG";
+                //listBoxChucNang.DataSource = pq_bll.LoadChucNang_PhanQuyen_BLL(cboQuyen.SelectedValue.ToString());
+                //listBoxChucNang.DisplayMember = "MACHUCNANG";
             }
         }
     }
